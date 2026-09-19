@@ -2,7 +2,6 @@ name: daily-jigou-neican
 
 on:
   schedule:
-    # 每天 20:00 Asia/Shanghai 跑一次
     - cron: '0 12 * * *'  # UTC 12:00 = Asia/Shanghai 20:00
   workflow_dispatch:
     inputs:
@@ -15,12 +14,12 @@ on:
           - backfill
         default: today
       start:
-        description: 'backfill start (YYYY-MM-DD), 仅 mode=backfill 用'
+        description: 'backfill start (YYYY-MM-DD)'
         required: false
         type: string
         default: ''
       end:
-        description: 'backfill end (YYYY-MM-DD), 仅 mode=backfill 用'
+        description: 'backfill end (YYYY-MM-DD)'
         required: false
         type: string
         default: ''
@@ -39,36 +38,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Setup Node (for zsxq-cli)
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
       - name: Install Python deps
         run: pip install -r requirements.txt
-
-      - name: Install zsxq-cli
-        run: npm install -g zsxq-cli
-
-      - name: Restore zsxq-cli token cache
-        uses: actions/cache@v4
-        with:
-          path: ~/.config/zsxq-cli
-          key: zsxq-cli-token-${{ github.run_id }}
-          restore-keys: |
-            zsxq-cli-token-
-
-      - name: Seed zsxq-cli token from secret (first run)
-        env:
-          ZSXQ_TOKEN: ${{ secrets.ZSXQ_TOKEN }}
-        run: |
-          mkdir -p ~/.config/zsxq-cli
-          if [ -n "$ZSXQ_TOKEN" ] && [ ! -f ~/.config/zsxq-cli/token.json ]; then
-            echo "$ZSXQ_TOKEN" > ~/.config/zsxq-cli/token.json
-            chmod 600 ~/.config/zsxq-cli/token.json
-            echo "Seeded zsxq-cli token from secret"
-          fi
-          zsxq-cli auth status || echo "WARN: zsxq-cli not authenticated"
 
       - name: Fetch 机构内参 from 通达信
         env:
@@ -100,6 +71,7 @@ jobs:
         if: env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill'
         env:
           ZSXQ_GROUP_ID: ${{ secrets.ZSXQ_GROUP_ID }}
+          ZSXQ_OAUTH_TOKEN: ${{ secrets.ZSXQ_OAUTH_TOKEN }}
         run: |
           python src/push_zsxq.py --input data/summarized.json
 
@@ -121,20 +93,13 @@ jobs:
           git commit -m "chore: auto-fetch 机构内参 $(date +%Y-%m-%d)" || exit 0
           git push
 
-      - name: Save zsxq-cli token cache
-        if: always()
-        uses: actions/cache/save@v4
-        with:
-          path: ~/.config/zsxq-cli
-          key: zsxq-cli-token-${{ github.run_id }}
-
       - name: Notify on failure
         if: failure()
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
         run: |
-          MSG="🚨 jigou-neican workflow failed: ${{ github.workflow }} @ ${{ github.run_id }}\nSee: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          MSG="jigou-neican workflow failed: ${{ github.workflow }} @ ${{ github.run_id }}\nSee: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           if [ -n "$FEISHU_WEBHOOK" ]; then
             curl -fsS -X POST "$FEISHU_WEBHOOK" \
               -H 'Content-Type: application/json' \

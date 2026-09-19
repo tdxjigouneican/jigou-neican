@@ -1,16 +1,92 @@
 # -*- coding: utf-8 -*-
 """push_zsxq.py — 推送机构内参到知识星球《外资纪要社》
 
-走 zsxq-cli OAuth(回归 v1.0,绕开 MCP server 的 UTF-8/GBK 编码 bug)。
-
-CLI: zsxq-cli topic +create --group-id <id> --text "..." [--files ...]
-Auth: zsxq-cli auth login (token 存 ~/.config/zsxq-cli/token.json)
+走 zsxq MCP HTTP(用 OAuth Bearer token,不走 zsxq-cli binary,跨平台)。
+经验: 用 OAuth Bearer token 调 MCP create_topic 中文正常;
+       用普通 MCP api_key 调会触发 zsxq 服务端 GBK 编码 bug,中文乱码。
 """
-import os, sys, json, subprocess, argparse, time
+import os, sys, json, urllib.request, urllib.error, argparse, time
 from pathlib import Path
 
-ZSXQ_CLI = os.environ.get('ZSXQ_CLI', 'zsxq-cli')
+MCP_BASE = 'https://mcp.zsxq.com/topic/mcp'
+BEARER_TOKEN = os.environ.get('ZSXQ_OAUTH_TOKEN', '')
+API_KEY = os.environ.get('ZSXQ_MCP_KEY', '')
 GROUP_ID = os.environ.get('ZSXQ_GROUP_ID', '48885115254258')
+
+
+def mcp_call(method, params=None, timeout=30):
+    """JSON-RPC 2.0 over HTTP。Bearer token 优先, api_key fallback。
+    Accept 必须含 application/json, text/event-stream (MCP Streamable HTTP 要求)
+    """
+    url = f'{MCP_BASE}?api_key={API_KEY}' if API_KEY else MCP_BASE
+    body = {
+        'jsonrpc': '2.0',
+        'id': int(time.time() * 1000) % 100000,
+        'method': method,
+        'params': params or {},
+    }
+    headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json, text/event-stream',
+    }
+    if BEARER_TOKEN:
+        headers['Authorization'] = f'Bearer {BEARER_TOKEN}'
+    try:
+        req = urllib.request.Request(url,
+            data=json.dumps(body, ensure_ascii=False).encode('utf-8'),
+            headers=headers, method='POST')
+        r = urllib.request.urlopen(req, timeout=timeout)
+        raw = r.read().decode('utf-8', errors='replace')
+        payload = None
+        if raw.startswith('event:'):
+            for line in raw.splitlines():
+                if line.startswith('data:'):
+                    try:
+                        payload = json.loads(line[5:].strip())
+                        break
+                    except: continue
+        if payload is None:
+            try:
+                payload = json.loads(raw)
+            except json.JSONDecodeError:
+                return True, raw[:200]
+        if 'error' in payload:
+            return False, f"RPC error: {payload['error']}"
+        return True, payload.get('result', payload)
+    except urllib.error.HTTPError as e:
+        try: err_body = e.read().decode('utf-8', errors='replace')[:300]
+        except: err_body = ''
+        return False, f'HTTP {e.code}: {err_body}'
+    except Exception as e:
+        return False, str(e)
+
+
+def zsxq_create_topic(title, content):
+    text = f'【机构内参】{title}\n\n{content}'
+    args = {
+        'group_id': GROUP_ID,
+        'title': title,
+        'content': text,
+        'type': 'talk',
+        'text_type': 'markdown',
+        'creation_statement': 'aigc',
+    }
+    ok, payload = mcp_call('tools/call', {'name': 'create_topic', 'arguments': args})
+    if ok:
+        # 解析 inner JSON 字符串(MCP 包了一层)
+        if isinstance(payload, dict) and 'content' in payload:
+            for c in payload.get('content', []):
+                if c.get('type') == 'text':
+                    try:
+                        inner = json.loads(c['text'])
+                        if inner.get('success'):
+                            tid = inner.get('topic', {}).get('topic_id', '?')
+                            return True, f'topic_id={tid}'
+                        else:
+                            return False, f'API error: {inner.get("error", inner)}'
+                    except: pass
+        return True, str(payload)[:300]
+    return False, str(payload)[:500]
 
 
 def find_files(data_dir, date=None):
@@ -51,42 +127,23 @@ def read_md(md_path):
     return title, body
 
 
-def zsxq_create_topic(title, content):
-    """调 zsxq-cli topic +create (v0.5.0+)
-    通过 stdin 传 --text 避开命令行长度限制 + escape 问题
-    """
-    if not GROUP_ID:
-        return False, 'ZSXQ_GROUP_ID env not set'
-
-    text = f'【机构内参】{title}\n\n{content}'
-
-    # 先看 zsxq-cli 帮助,确认正确调用方式
-    # v0.5.0: zsxq-cli topic +create --group-id <id> --text <text>
-    # text 很长时用 stdin 或文件传入
-    cmd = [ZSXQ_CLI, 'topic', '+create', '--group-id', GROUP_ID, '--text', text]
-    try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30,
-                                encoding='utf-8', errors='replace')
-        if result.returncode == 0:
-            return True, result.stdout[:500]
-        return False, f'rc={result.returncode} stderr={result.stderr[:500]}'
-    except FileNotFoundError:
-        return False, f'zsxq-cli not found at {ZSXQ_CLI}'
-    except subprocess.TimeoutExpired:
-        return False, 'timeout'
-    except Exception as e:
-        return False, str(e)
-
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--input', '-i', default='data')
     parser.add_argument('--date', help='only push this date (YYYY-MM-DD)')
+    parser.add_argument('--list-tools', action='store_true', help='list MCP tools and exit (debug)')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args()
 
+    if args.list_tools:
+        ok, payload = mcp_call('tools/list', {})
+        print(json.dumps(payload, ensure_ascii=False, indent=2) if ok else f'ERR: {payload}')
+        return
+
     if not GROUP_ID:
         print('ERR: ZSXQ_GROUP_ID env not set'); sys.exit(1)
+    if not BEARER_TOKEN and not API_KEY:
+        print('ERR: need ZSXQ_OAUTH_TOKEN (preferred) or ZSXQ_MCP_KEY'); sys.exit(1)
 
     files = find_files(args.input, args.date)
     if not files:
@@ -109,9 +166,9 @@ def main():
             print(f'  push: {title[:60]}...', flush=True)
             success, msg = zsxq_create_topic(title, body)
             if success:
-                ok += 1; print(f'    OK: {msg[:100]}')
+                ok += 1; print(f'    OK: {msg[:150]}')
             else:
-                fail += 1; print(f'    FAIL: {msg[:200]}')
+                fail += 1; print(f'    FAIL: {msg[:300]}')
             time.sleep(2)
             if f.name.startswith('.zsxq_push_'):
                 tmp_to_cleanup.append(f)
