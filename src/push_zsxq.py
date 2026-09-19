@@ -99,10 +99,20 @@ def find_files(data_dir, date=None):
         for it in items:
             rec_id = it.get('rec_id', '')
             title = it.get('title', '无标题')
-            body = it.get('ai_summary') or it.get('body') or ''
+            # 优先原文(T003 preview),其次 AI 摘要
+            body = it.get('body') or it.get('full') or it.get('ai_summary') or ''
             pub = it.get('pub_time', '')
+            # 优先 stock_names (中文名+代码),其次 stocks (代码)
+            stock_names = it.get('stock_names', [])
             stocks = it.get('stocks', [])
-            stock_str = ', '.join(stocks) if stocks else '未识别'
+            if stock_names and stocks:
+                stock_str = ', '.join(f"{c}{n}" for c, n in zip(stocks, stock_names))
+            elif stock_names:
+                stock_str = ', '.join(stock_names)
+            elif stocks:
+                stock_str = ', '.join(stocks)
+            else:
+                stock_str = '未识别'
             text = f"【机构内参】{title}\n时间：{pub}\n个股：{stock_str}\n\n{body}"
             tmp = p.parent / f'.zsxq_push_{rec_id}.md'
             tmp.write_text(text, encoding='utf-8')

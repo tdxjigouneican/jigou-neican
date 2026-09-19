@@ -97,7 +97,16 @@ def save_md(items, output_dir):
             fn = f"{t}_{safe_title}_{rec_id}.md"
             fp = os.path.join(d, fn)
             if not os.path.exists(fp):
-                stock_str = ', '.join(it['stocks']) or '未识别'
+                stocks = it.get('stocks', [])
+                stock_names = it.get('stock_names', [])
+                if stocks and stock_names:
+                    stock_str = ', '.join(f"{c}{n}" for c, n in zip(stocks, stock_names)) or '未识别'
+                elif stock_names:
+                    stock_str = ', '.join(stock_names) or '未识别'
+                elif stocks:
+                    stock_str = ', '.join(stocks) or '未识别'
+                else:
+                    stock_str = '未识别'
                 text = f"""【机构内参】{it['title']}
 时间：{it['pub_time']}
 个股：{stock_str}
