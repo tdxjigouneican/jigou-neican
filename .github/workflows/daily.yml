@@ -49,6 +49,7 @@ jobs:
           FETCH_START: ${{ inputs.start || '' }}
           FETCH_END: ${{ inputs.end || '' }}
         run: |
+          set -e
           mkdir -p $OUTPUT_DIR
           if [ "$FETCH_MODE" = "backfill" ]; then
             if [ -z "$FETCH_START" ] || [ -z "$FETCH_END" ]; then
@@ -65,7 +66,8 @@ jobs:
           AGNES_API_KEY: ${{ secrets.AGNES_API_KEY }}
           AGNES_BASE_URL: ${{ secrets.AGNES_BASE_URL }}
         run: |
-          python src/agnes_summarize.py --input data --output data/summarized.json --limit 50
+          set -e
+          python src/agnes_summarize.py --input data --output data/summarized.json --limit 50 || echo "WARN: agnes failed, push raw data instead"
 
       - name: Push to 知识星球《外资纪要社》
         if: env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill'
@@ -73,6 +75,11 @@ jobs:
           ZSXQ_GROUP_ID: ${{ secrets.ZSXQ_GROUP_ID }}
           ZSXQ_OAUTH_TOKEN: ${{ secrets.ZSXQ_OAUTH_TOKEN }}
         run: |
+          set -e
+          echo "[zsxq] GROUP_ID=$ZSXQ_GROUP_ID, TOKEN_LEN=${#ZSXQ_OAUTH_TOKEN}"
+          if [ -z "$ZSXQ_OAUTH_TOKEN" ]; then
+            echo "ERR: ZSXQ_OAUTH_TOKEN not set"; exit 1
+          fi
           python src/push_zsxq.py --input data/summarized.json
 
       - name: Push to IMA 知识库
@@ -83,6 +90,7 @@ jobs:
           IMA_KB_ID: 'eD_gxNj7vxloDEYzjG9_9LEdABb_WBeI5Tqjs41lm_I='
           IMA_FOLDER_ID: 'folder_7506378096640223'
         run: |
+          set -e
           python src/push_ima.py --input data/summarized.json
 
       - name: Commit and push outputs
