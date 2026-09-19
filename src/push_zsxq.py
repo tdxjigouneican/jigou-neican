@@ -1,21 +1,87 @@
 # -*- coding: utf-8 -*-
 """push_zsxq.py — 推送机构内参到知识星球《外资纪要社》
-用 zsxq-cli (官方 v0.5.0+) 的 `topic +create` 命令
+
+走 zsxq MCP (Model Context Protocol) endpoint,直接 HTTP POST JSON-RPC 2.0。
+不再依赖 zsxq-cli 子进程或 OAuth token 持久化。
+
+认证:api_key 通过 query 参数传递 (ZSXQ_MCP_KEY 环境变量)
+端点:https://mcp.zsxq.com/topic/mcp
+
+参考 MCP 标准协议:
+  - initialize / tools/list / tools/call
+  - 请求:{"jsonrpc":"2.0","id":N,"method":"tools/call","params":{"name":"create_topic","arguments":{...}}}
+  - 响应:{"jsonrpc":"2.0","id":N,"result":{...}} 或 {"error":{...}}
 """
-import os, sys, json, subprocess, argparse, time
+import os, sys, json, urllib.request, urllib.error, argparse, time
 from pathlib import Path
 
-ZSXQ_CLI = os.environ.get('ZSXQ_CLI', 'zsxq-cli')
-GROUP_ID = os.environ.get('ZSXQ_GROUP_ID', '')  # 《外资纪要社》的 group_id
+MCP_BASE = 'https://mcp.zsxq.com/topic/mcp'
+API_KEY = os.environ.get('ZSXQ_MCP_KEY', '')
+GROUP_ID = os.environ.get('ZSXQ_GROUP_ID', '')
+
+
+def mcp_call(method, params=None, timeout=30):
+    """JSON-RPC 2.0 over HTTP。返回 (ok, payload)"""
+    if not API_KEY:
+        return False, 'ZSXQ_MCP_KEY env not set'
+    url = f'{MCP_BASE}?api_key={API_KEY}'
+    body = {
+        'jsonrpc': '2.0',
+        'id': int(time.time() * 1000) % 100000,
+        'method': method,
+        'params': params or {},
+    }
+    try:
+        req = urllib.request.Request(url,
+            data=json.dumps(body, ensure_ascii=False).encode('utf-8'),
+            headers={'Content-Type': 'application/json; charset=utf-8',
+                     'Accept': 'application/json'},
+            method='POST')
+        r = urllib.request.urlopen(req, timeout=timeout)
+        raw = r.read().decode('utf-8', errors='replace')
+        try:
+            payload = json.loads(raw)
+        except json.JSONDecodeError:
+            return True, raw[:200]  # 200 但非 JSON,当成成功原样返回
+        if 'error' in payload:
+            return False, f"RPC error: {payload['error']}"
+        return True, payload.get('result', payload)
+    except urllib.error.HTTPError as e:
+        try:
+            err_body = e.read().decode('utf-8', errors='replace')[:300]
+        except: err_body = ''
+        return False, f'HTTP {e.code}: {err_body}'
+    except Exception as e:
+        return False, str(e)
+
+
+def zsxq_create_topic(title, content):
+    """通过 MCP tools/call 创建 topic。先列工具找方法名(默认 create_topic)。"""
+    text = f'【机构内参】{title}\n\n{content}'
+    args = {
+        'group_id': GROUP_ID,
+        'title': title,
+        'text': text,
+    }
+    # 尝试 1: tools/call create_topic
+    ok, payload = mcp_call('tools/call', {'name': 'create_topic', 'arguments': args})
+    if ok:
+        return True, str(payload)[:300]
+    # 尝试 2: tools/call post_topic(兼容命名)
+    ok2, payload2 = mcp_call('tools/call', {'name': 'post_topic', 'arguments': args})
+    if ok2:
+        return True, str(payload2)[:300]
+    # 尝试 3: 直接调 create_topic(某些 MCP server 把方法名当顶层 method)
+    ok3, payload3 = mcp_call('create_topic', args)
+    if ok3:
+        return True, str(payload3)[:300]
+    return False, f'all attempts failed; last: {payload}'
+
 
 def find_files(data_dir, date=None):
-    """支持两种输入:
-    - data_dir 是目录 → 找 YYYY-MM-DD/*.md
-    - data_dir 是 summarized.json → 解析 rec_id/title/body,产出合成"伪文件"流
-    """
+    """支持目录或 summarized.json 入口"""
     p = Path(data_dir)
     if not p.exists(): return []
-    # summarized.json 入口
     if p.is_file() and p.suffix == '.json':
         items = json.loads(p.read_text(encoding='utf-8', errors='replace'))
         out = []
@@ -27,7 +93,6 @@ def find_files(data_dir, date=None):
             stocks = it.get('stocks', [])
             stock_str = ', '.join(stocks) if stocks else '未识别'
             text = f"【机构内参】{title}\n时间：{pub}\n个股：{stock_str}\n\n{body}"
-            # 临时文件,让 read_md 复用现有解析逻辑
             tmp = p.parent / f'.zsxq_push_{rec_id}.md'
             tmp.write_text(text, encoding='utf-8')
             out.append(tmp)
@@ -39,9 +104,9 @@ def find_files(data_dir, date=None):
     if not days: return []
     return sorted(days[0].glob('*.md'))
 
+
 def read_md(md_path):
     text = Path(md_path).read_text(encoding='utf-8', errors='replace')
-    # 抽取标题（第一行）
     lines = text.split('\n')
     title = ''
     body = text
@@ -50,45 +115,29 @@ def read_md(md_path):
         body = '\n'.join(lines[1:]).strip()
     return title, body
 
-def zsxq_create_topic(title, content):
-    """调 zsxq-cli topic +create"""
-    if not GROUP_ID:
-        return False, 'ZSXQ_GROUP_ID env not set'
-
-    # 构造 zsxq-cli 调用
-    # zsxq-cli topic +create --group-id <id> --text "..." [--files ...]
-    # ⚠️ zsxq-cli 的 --text 参数对长文本需要 escape
-    cmd = [
-        ZSXQ_CLI, 'topic', '+create',
-        '--group-id', GROUP_ID,
-        '--text', f'【机构内参】{title}\n\n{content}',
-    ]
-    try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30,
-                                encoding='utf-8', errors='replace')
-        if result.returncode == 0:
-            return True, result.stdout[:500]
-        return False, f'rc={result.returncode} stderr={result.stderr[:500]}'
-    except FileNotFoundError:
-        return False, f'zsxq-cli not found at {ZSXQ_CLI}'
-    except subprocess.TimeoutExpired:
-        return False, 'timeout'
-    except Exception as e:
-        return False, str(e)
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--input', '-i', default='data')
     parser.add_argument('--date', help='only push this date (YYYY-MM-DD)')
+    parser.add_argument('--list-tools', action='store_true', help='list MCP tools and exit (debug)')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args()
 
-    files = find_files(args.input, args.date)
-    if not files:
-        print(f'no md files found in {args.input}/{args.date or "latest"}')
+    if args.list_tools:
+        ok, payload = mcp_call('tools/list', {})
+        print(json.dumps(payload, ensure_ascii=False, indent=2) if ok else f'ERR: {payload}')
         return
 
-    # 限制每天最多发 30 条（避免刷屏）
+    if not GROUP_ID:
+        print('ERR: ZSXQ_GROUP_ID env not set'); sys.exit(1)
+    if not API_KEY:
+        print('ERR: ZSXQ_MCP_KEY env not set'); sys.exit(1)
+
+    files = find_files(args.input, args.date)
+    if not files:
+        print(f'no md files found in {args.input}/{args.date or "latest"}'); return
+
     files = files[:30]
 
     if args.dry_run:
@@ -106,10 +155,10 @@ def main():
             print(f'  push: {title[:60]}...', flush=True)
             success, msg = zsxq_create_topic(title, body)
             if success:
-                ok += 1; print(f'    OK: {msg[:100]}')
+                ok += 1; print(f'    OK: {msg[:150]}')
             else:
-                fail += 1; print(f'    FAIL: {msg[:200]}')
-            time.sleep(2)  # 避免刷屏
+                fail += 1; print(f'    FAIL: {msg[:300]}')
+            time.sleep(2)
             if f.name.startswith('.zsxq_push_'):
                 tmp_to_cleanup.append(f)
     finally:
@@ -118,6 +167,7 @@ def main():
             except: pass
 
     print(f'\nDONE: ok={ok} fail={fail}')
+
 
 if __name__ == '__main__':
     main()

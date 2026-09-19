@@ -60,7 +60,7 @@ jobs:
         if: inputs.push_zsxq == 'true'
         env:
           ZSXQ_GROUP_ID: ${{ secrets.ZSXQ_GROUP_ID }}
-          ZSXQ_TOKEN: ${{ secrets.ZSXQ_TOKEN }}
+          ZSXQ_MCP_KEY: ${{ secrets.ZSXQ_MCP_KEY }}
         run: python src/push_zsxq.py --input data/summarized.json
 
       - name: Push to IMA (可选)
