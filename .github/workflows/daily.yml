@@ -66,9 +66,13 @@ jobs:
         if: env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill'
         env:
           AGNES_API_KEY: ${{ secrets.AGNES_API_KEY }}
-          AGNES_BASE_URL: ${{ secrets.AGNES_BASE_URL }}
+          AGNES_BASE_URL: 'https://apihub.agnes-ai.com/v1'
         run: |
           set -e
+          echo "[agnes] AGNES_API_KEY length: ${#AGNES_API_KEY}, AGNES_BASE_URL=$AGNES_BASE_URL"
+          if [ -z "$AGNES_API_KEY" ]; then
+            echo "ERR: AGNES_API_KEY not set"; exit 1
+          fi
           if [ ! -d data ] || [ -z "$(find data -name '*.md' -type f | head -1)" ]; then
             echo "ERR: no .md files in data/. Skip summarize."; exit 1
           fi
