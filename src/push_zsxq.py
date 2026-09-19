@@ -17,7 +17,7 @@ from pathlib import Path
 
 MCP_BASE = 'https://mcp.zsxq.com/topic/mcp'
 API_KEY = os.environ.get('ZSXQ_MCP_KEY', '')
-GROUP_ID = os.environ.get('ZSXQ_GROUP_ID', '')
+GROUP_ID = os.environ.get('ZSXQ_GROUP_ID', '48885115254258')
 
 
 def mcp_call(method, params=None, timeout=30):
@@ -68,10 +68,11 @@ def mcp_call(method, params=None, timeout=30):
 
 def zsxq_create_topic(title, content):
     """通过 MCP tools/call 调用 create_topic 工具
-    schema (来自 list-tools):
+    schema (实测):
       required: group_id
       optional: title, content, type (talk|q&a), text_type (markdown|plain),
-                creation_statement, image_ids, file_ids
+                creation_statement (aigc/personal_perspective/none), image_ids, file_ids
+    实测发现 creation_statement='aigc' 是 AI 推送必填,否则 zsxq 后端可能拒。
     """
     text = f'【机构内参】{title}\n\n{content}'
     args = {
@@ -80,6 +81,7 @@ def zsxq_create_topic(title, content):
         'content': text,
         'type': 'talk',
         'text_type': 'markdown',
+        'creation_statement': 'aigc',
     }
     ok, payload = mcp_call('tools/call', {'name': 'create_topic', 'arguments': args})
     if ok:
