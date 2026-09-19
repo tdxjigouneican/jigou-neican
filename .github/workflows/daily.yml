@@ -1,0 +1,151 @@
+name: daily-jigou-neican
+
+on:
+  schedule:
+    # 每天 20:00 Asia/Shanghai 跑一次
+    - cron: '0 12 * * *'  # UTC 12:00 = Asia/Shanghai 20:00
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'fetch mode'
+        required: true
+        type: choice
+        options:
+          - today
+          - backfill
+        default: today
+      start:
+        description: 'backfill start (YYYY-MM-DD), 仅 mode=backfill 用'
+        required: false
+        type: string
+        default: ''
+      end:
+        description: 'backfill end (YYYY-MM-DD), 仅 mode=backfill 用'
+        required: false
+        type: string
+        default: ''
+
+jobs:
+  fetch-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Setup Node (for zsxq-cli)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Python deps
+        run: pip install -r requirements.txt
+
+      - name: Install zsxq-cli
+        run: npm install -g zsxq-cli
+
+      - name: Restore zsxq-cli token cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.config/zsxq-cli
+          key: zsxq-cli-token-${{ github.run_id }}
+          restore-keys: |
+            zsxq-cli-token-
+
+      - name: Auth check zsxq-cli
+        env:
+          ZSXQ_TOKEN: ${{ secrets.ZSXQ_TOKEN }}
+        run: |
+          if [ -n "$ZSXQ_TOKEN" ] && [ ! -f ~/.config/zsxq-cli/token.json ]; then
+            mkdir -p ~/.config/zsxq-cli
+            echo "$ZSXQ_TOKEN" > ~/.config/zsxq-cli/token.json
+            chmod 600 ~/.config/zsxq-cli/token.json
+            echo "Seeded zsxq-cli token from secret"
+          fi
+          zsxq-cli auth status || echo "WARN: zsxq-cli not authenticated (will fail push step)"
+
+      - name: Fetch 机构内参 from 通达信
+        env:
+          TDX_API_BASE: 'http://hot.icfqs.com:7615'
+          OUTPUT_DIR: 'data'
+          FETCH_MODE: ${{ inputs.mode || 'today' }}
+          FETCH_START: ${{ inputs.start || '' }}
+          FETCH_END: ${{ inputs.end || '' }}
+        run: |
+          mkdir -p $OUTPUT_DIR
+          if [ "$FETCH_MODE" = "backfill" ]; then
+            if [ -z "$FETCH_START" ] || [ -z "$FETCH_END" ]; then
+              echo "ERR: backfill needs --start and --end"; exit 1
+            fi
+            python src/jigou_fetcher.py backfill --start "$FETCH_START" --end "$FETCH_END" --output $OUTPUT_DIR
+          else
+            python src/jigou_fetcher.py today --output $OUTPUT_DIR
+          fi
+
+      - name: AI summarize with agnes
+        if: env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill'
+        env:
+          AGNES_API_KEY: ${{ secrets.AGNES_API_KEY }}
+          AGNES_BASE_URL: ${{ secrets.AGNES_BASE_URL }}
+        run: |
+          python src/agnes_summarize.py --input data --output data/summarized.json --limit 50
+
+      - name: Push to 知识星球《外资纪要社》
+        if: env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill'
+        env:
+          ZSXQ_GROUP_ID: ${{ secrets.ZSXQ_GROUP_ID }}
+          ZSXQ_TOKEN: ${{ secrets.ZSXQ_TOKEN }}
+        run: |
+          python src/push_zsxq.py --input data/summarized.json
+
+      - name: Push to IMA 知识库
+        if: env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill'
+        env:
+          IMA_CLIENT_ID: ${{ secrets.IMA_CLIENT_ID }}
+          IMA_API_KEY: ${{ secrets.IMA_API_KEY }}
+          IMA_KB_ID: 'eD_gxNj7vxloDEYzjG9_9LEdABb_WBeI5Tqjs41lm_I='
+          IMA_FOLDER_ID: 'folder_7506378096640223'
+        run: |
+          python src/push_ima.py --input data/summarized.json
+
+      - name: Commit and push outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "chore: auto-fetch 机构内参 $(date +%Y-%m-%d)" || exit 0
+          git push
+
+      - name: Save zsxq-cli token cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.config/zsxq-cli
+          key: zsxq-cli-token-${{ github.run_id }}
+
+      - name: Notify on failure
+        if: failure()
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
+        run: |
+          MSG="🚨 jigou-neican workflow failed: ${{ github.workflow }} @ ${{ github.run_id }}\nSee: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          if [ -n "$FEISHU_WEBHOOK" ]; then
+            curl -fsS -X POST "$FEISHU_WEBHOOK" \
+              -H 'Content-Type: application/json' \
+              -d "{\"msg_type\":\"text\",\"content\":{\"text\":\"$MSG\"}}" || echo "feishu notify failed"
+          fi
+          if [ -n "$DINGTALK_WEBHOOK" ]; then
+            curl -fsS -X POST "$DINGTALK_WEBHOOK" \
+              -H 'Content-Type: application/json' \
+              -d "{\"msgtype\":\"text\",\"text\":{\"content\":\"$MSG\"}}" || echo "dingtalk notify failed"
+          fi
+          if [ -z "$FEISHU_WEBHOOK" ] && [ -z "$DINGTALK_WEBHOOK" ]; then
+            echo "No webhook configured; skip notify"
+          fi

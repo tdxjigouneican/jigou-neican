@@ -1,0 +1,81 @@
+name: backfill-jigou-neican
+
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: '回填起始日期 YYYY-MM-DD'
+        required: true
+        type: string
+      end:
+        description: '回填结束日期 YYYY-MM-DD'
+        required: true
+        type: string
+      push_zsxq:
+        description: '是否推送知识星球'
+        required: true
+        type: choice
+        options: ['true', 'false']
+        default: 'false'
+      push_ima:
+        description: '是否推送 IMA'
+        required: true
+        type: choice
+        options: ['true', 'false']
+        default: 'false'
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Backfill from TDX
+        env:
+          TDX_API_BASE: 'http://hot.icfqs.com:7615'
+          OUTPUT_DIR: 'data'
+        run: |
+          mkdir -p $OUTPUT_DIR
+          python src/jigou_fetcher.py backfill \
+            --start "${{ inputs.start }}" \
+            --end "${{ inputs.end }}" \
+            --output $OUTPUT_DIR
+
+      - name: AI summarize (limited)
+        env:
+          AGNES_API_KEY: ${{ secrets.AGNES_API_KEY }}
+          AGNES_BASE_URL: ${{ secrets.AGNES_BASE_URL }}
+        run: |
+          python src/agnes_summarize.py --input data --output data/summarized.json --limit 200
+
+      - name: Push to 知识星球 (可选)
+        if: inputs.push_zsxq == 'true'
+        env:
+          ZSXQ_GROUP_ID: ${{ secrets.ZSXQ_GROUP_ID }}
+          ZSXQ_TOKEN: ${{ secrets.ZSXQ_TOKEN }}
+        run: python src/push_zsxq.py --input data/summarized.json
+
+      - name: Push to IMA (可选)
+        if: inputs.push_ima == 'true'
+        env:
+          IMA_CLIENT_ID: ${{ secrets.IMA_CLIENT_ID }}
+          IMA_API_KEY: ${{ secrets.IMA_API_KEY }}
+          IMA_KB_ID: 'eD_gxNj7vxloDEYzjG9_9LEdABb_WBeI5Tqjs41lm_I='
+          IMA_FOLDER_ID: 'folder_7506378096640223'
+        run: python src/push_ima.py --input data/summarized.json
+
+      - name: Commit backfill output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "chore: backfill 机构内参 ${{ inputs.start }}~${{ inputs.end }}" || exit 0
+          git push

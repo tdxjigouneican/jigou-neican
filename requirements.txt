@@ -1,0 +1,7 @@
+# 通达信机构内参 - Python dependencies
+requests>=2.31
+python-dateutil>=2.8
+openai>=1.0  # for agnes AI summarize
+flask>=3.0
+gunicorn>=21.2  # Render Web Service 跑 Flask WSGI
+uvicorn>=0.27  # 保留以备 ASGI 迁移

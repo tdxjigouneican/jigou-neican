@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+
+# Local data (large + sensitive)
+data/
+*.md
+!README.md
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# GitHub Actions runs
+.github/workflows/local-run/
+
+# Secrets
+secrets/
+*.key
+*.pem
