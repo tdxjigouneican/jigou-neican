@@ -35,14 +35,25 @@ def mcp_call(method, params=None, timeout=30):
         req = urllib.request.Request(url,
             data=json.dumps(body, ensure_ascii=False).encode('utf-8'),
             headers={'Content-Type': 'application/json; charset=utf-8',
-                     'Accept': 'application/json'},
+                     'Accept': 'application/json, text/event-stream'},
             method='POST')
         r = urllib.request.urlopen(req, timeout=timeout)
         raw = r.read().decode('utf-8', errors='replace')
-        try:
-            payload = json.loads(raw)
-        except json.JSONDecodeError:
-            return True, raw[:200]  # 200 但非 JSON,当成成功原样返回
+        # MCP Streamable HTTP 响应可能是 JSON 或 SSE (event: message + data: ...)
+        payload = None
+        if raw.startswith('event:'):
+            # 解析 SSE:取每段 data:
+            for line in raw.splitlines():
+                if line.startswith('data:'):
+                    try:
+                        payload = json.loads(line[5:].strip())
+                        break
+                    except: continue
+        if payload is None:
+            try:
+                payload = json.loads(raw)
+            except json.JSONDecodeError:
+                return True, raw[:200]
         if 'error' in payload:
             return False, f"RPC error: {payload['error']}"
         return True, payload.get('result', payload)
@@ -56,26 +67,24 @@ def mcp_call(method, params=None, timeout=30):
 
 
 def zsxq_create_topic(title, content):
-    """通过 MCP tools/call 创建 topic。先列工具找方法名(默认 create_topic)。"""
+    """通过 MCP tools/call 调用 create_topic 工具
+    schema (来自 list-tools):
+      required: group_id
+      optional: title, content, type (talk|q&a), text_type (markdown|plain),
+                creation_statement, image_ids, file_ids
+    """
     text = f'【机构内参】{title}\n\n{content}'
     args = {
         'group_id': GROUP_ID,
         'title': title,
-        'text': text,
+        'content': text,
+        'type': 'talk',
+        'text_type': 'markdown',
     }
-    # 尝试 1: tools/call create_topic
     ok, payload = mcp_call('tools/call', {'name': 'create_topic', 'arguments': args})
     if ok:
         return True, str(payload)[:300]
-    # 尝试 2: tools/call post_topic(兼容命名)
-    ok2, payload2 = mcp_call('tools/call', {'name': 'post_topic', 'arguments': args})
-    if ok2:
-        return True, str(payload2)[:300]
-    # 尝试 3: 直接调 create_topic(某些 MCP server 把方法名当顶层 method)
-    ok3, payload3 = mcp_call('create_topic', args)
-    if ok3:
-        return True, str(payload3)[:300]
-    return False, f'all attempts failed; last: {payload}'
+    return False, str(payload)[:500]
 
 
 def find_files(data_dir, date=None):
