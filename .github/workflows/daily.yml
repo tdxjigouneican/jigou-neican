@@ -39,16 +39,36 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Setup Node (for zsxq-cli)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Install Python deps
         run: pip install -r requirements.txt
 
-      - name: List zsxq MCP tools (debug, first run only)
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.mode != 'backfill' }}
+      - name: Install zsxq-cli
+        run: npm install -g zsxq-cli
+
+      - name: Restore zsxq-cli token cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.config/zsxq-cli
+          key: zsxq-cli-token-${{ github.run_id }}
+          restore-keys: |
+            zsxq-cli-token-
+
+      - name: Seed zsxq-cli token from secret (first run)
         env:
-          ZSXQ_MCP_KEY: ${{ secrets.ZSXQ_MCP_KEY }}
+          ZSXQ_TOKEN: ${{ secrets.ZSXQ_TOKEN }}
         run: |
-          python src/push_zsxq.py --list-tools 2>&1 | tee -a $GITHUB_STEP_SUMMARY
-          echo "If tools list is empty or 'RPC error',update push_zsxq.py method names."
+          mkdir -p ~/.config/zsxq-cli
+          if [ -n "$ZSXQ_TOKEN" ] && [ ! -f ~/.config/zsxq-cli/token.json ]; then
+            echo "$ZSXQ_TOKEN" > ~/.config/zsxq-cli/token.json
+            chmod 600 ~/.config/zsxq-cli/token.json
+            echo "Seeded zsxq-cli token from secret"
+          fi
+          zsxq-cli auth status || echo "WARN: zsxq-cli not authenticated"
 
       - name: Fetch 机构内参 from 通达信
         env:
@@ -80,7 +100,6 @@ jobs:
         if: env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill'
         env:
           ZSXQ_GROUP_ID: ${{ secrets.ZSXQ_GROUP_ID }}
-          ZSXQ_MCP_KEY: ${{ secrets.ZSXQ_MCP_KEY }}
         run: |
           python src/push_zsxq.py --input data/summarized.json
 
@@ -102,9 +121,12 @@ jobs:
           git commit -m "chore: auto-fetch 机构内参 $(date +%Y-%m-%d)" || exit 0
           git push
 
-      - name: Save zsxq-cli token cache (DEPRECATED, removed)
+      - name: Save zsxq-cli token cache
         if: always()
-        run: echo "zsxq-cli token cache no longer needed; using MCP api_key"
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.config/zsxq-cli
+          key: zsxq-cli-token-${{ github.run_id }}
 
       - name: Notify on failure
         if: failure()
