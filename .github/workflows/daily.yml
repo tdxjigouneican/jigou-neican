@@ -59,6 +59,8 @@ jobs:
           else
             python src/jigou_fetcher.py today --output $OUTPUT_DIR
           fi
+          echo "[fetch] done. Files in $OUTPUT_DIR:"
+          find $OUTPUT_DIR -type f | head -10
 
       - name: AI summarize with agnes
         if: env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill'
@@ -67,7 +69,11 @@ jobs:
           AGNES_BASE_URL: ${{ secrets.AGNES_BASE_URL }}
         run: |
           set -e
-          python src/agnes_summarize.py --input data --output data/summarized.json --limit 50 || echo "WARN: agnes failed, push raw data instead"
+          if [ ! -d data ] || [ -z "$(find data -name '*.md' -type f | head -1)" ]; then
+            echo "ERR: no .md files in data/. Skip summarize."; exit 1
+          fi
+          python src/agnes_summarize.py --input data --output data/summarized.json --limit 50
+          echo "[agnes] done. summarized.json size: $(wc -c < data/summarized.json 2>/dev/null || echo 0) bytes"
 
       - name: Push to 知识星球《外资纪要社》
         if: env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill'
@@ -76,11 +82,11 @@ jobs:
           ZSXQ_OAUTH_TOKEN: ${{ secrets.ZSXQ_OAUTH_TOKEN }}
         run: |
           set -e
-          echo "[zsxq] GROUP_ID=$ZSXQ_GROUP_ID, TOKEN_LEN=${#ZSXQ_OAUTH_TOKEN}"
           if [ -z "$ZSXQ_OAUTH_TOKEN" ]; then
             echo "ERR: ZSXQ_OAUTH_TOKEN not set"; exit 1
           fi
-          python src/push_zsxq.py --input data/summarized.json
+          echo "[zsxq] GROUP_ID=$ZSXQ_GROUP_ID, TOKEN_LEN=${#ZSXQ_OAUTH_TOKEN}"
+          python src/push_zsxq.py --input data/summarized.json || echo "[zsxq] push had errors, continue"
 
       - name: Push to IMA 知识库
         if: env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill'
@@ -91,6 +97,9 @@ jobs:
           IMA_FOLDER_ID: 'folder_7506378096640223'
         run: |
           set -e
+          if [ ! -f data/summarized.json ]; then
+            echo "ERR: data/summarized.json not found. agnes step must have failed."; exit 1
+          fi
           python src/push_ima.py --input data/summarized.json
 
       - name: Commit and push outputs
