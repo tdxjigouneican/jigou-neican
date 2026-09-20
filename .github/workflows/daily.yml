@@ -137,9 +137,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git commit -m "chore: auto-fetch 机构内参 $(date +%Y-%m-%d)" || exit 0
-          git push
+          # 用 -f 强制 add, 绕过 .gitignore (data/ 被 ignore 但我们要 commit 它)
+          git add -f data/
+          git diff --cached --quiet || {
+            git commit -m "chore: auto-fetch 机构内参 $(date +%Y-%m-%d)"
+            git push
+          }
+          echo "[commit] no changes or commit skipped"
 
       - name: Notify on failure
         if: failure()
