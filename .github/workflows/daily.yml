@@ -32,34 +32,38 @@ jobs:
 
     steps:
       - name: Trading hours gate
+        id: gate
         shell: bash
         run: |
           # 仅在工作日 (周一-周五) 北京时间 07:00-17:00 (含) 之间跑
-          TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S %Z %w'
-          DOW=$(TZ='Asia/Shanghai' date '+%w')   # 0=周日 6=周六
+          DOW=$(TZ='Asia/Shanghai' date '+%w')
           HOUR=$(TZ='Asia/Shanghai' date '+%H')
           MIN=$(TZ='Asia/Shanghai' date '+%M')
           DECIMAL=$((10#$HOUR * 100 + 10#$MIN))
           if [ "$DOW" -ge 1 ] && [ "$DOW" -le 5 ] && [ "$DECIMAL" -ge 700 ] && [ "$DECIMAL" -le 1659 ]; then
             echo "[gate] trading hours OK (DOW=$DOW HHMM=$DECIMAL)"
-            exit 0
+            echo "trading=true" >> $GITHUB_OUTPUT
           else
             echo "[gate] skip (DOW=$DOW HHMM=$DECIMAL)"
-            exit 78   # neutral skip, 不算失败
+            echo "trading=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Checkout
+        if: steps.gate.outputs.trading == 'true' || github.event_name == 'workflow_dispatch'
         uses: actions/checkout@v4
 
       - name: Setup Python
+        if: steps.gate.outputs.trading == 'true' || github.event_name == 'workflow_dispatch'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Install Python deps
+        if: steps.gate.outputs.trading == 'true' || github.event_name == 'workflow_dispatch'
         run: pip install -r requirements.txt
 
       - name: Fetch 机构内参 from 通达信
+        if: steps.gate.outputs.trading == 'true' || github.event_name == 'workflow_dispatch'
         env:
           TDX_API_BASE: 'http://hot.icfqs.com:7615'
           OUTPUT_DIR: 'data'
@@ -81,7 +85,7 @@ jobs:
           find $OUTPUT_DIR -type f | head -10
 
       - name: AI summarize with agnes (for IMA only)
-        if: env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill'
+        if: (steps.gate.outputs.trading == 'true' || github.event_name == 'workflow_dispatch') && (env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill')
         continue-on-error: true
         env:
           AGNES_API_KEY: ${{ secrets.AGNES_API_KEY }}
@@ -98,7 +102,7 @@ jobs:
           echo "[agnes] done. summarized.json size: $(wc -c < data/summarized.json 2>/dev/null || echo 0) bytes"
 
       - name: Push to 知识星球《外资纪要社》(原文)
-        if: env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill'
+        if: (steps.gate.outputs.trading == 'true' || github.event_name == 'workflow_dispatch') && (env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill')
         env:
           ZSXQ_GROUP_ID: ${{ secrets.ZSXQ_GROUP_ID }}
           ZSXQ_OAUTH_TOKEN: ${{ secrets.ZSXQ_OAUTH_TOKEN }}
@@ -112,7 +116,7 @@ jobs:
           python src/push_zsxq.py --input data || echo "[zsxq] push had errors, continue"
 
       - name: Push to IMA 知识库
-        if: env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill'
+        if: (steps.gate.outputs.trading == 'true' || github.event_name == 'workflow_dispatch') && (env.FETCH_MODE != 'backfill' || inputs.mode != 'backfill')
         env:
           IMA_CLIENT_ID: ${{ secrets.IMA_CLIENT_ID }}
           IMA_API_KEY: ${{ secrets.IMA_API_KEY }}
@@ -129,6 +133,7 @@ jobs:
           fi
 
       - name: Commit and push outputs
+        if: steps.gate.outputs.trading == 'true' || github.event_name == 'workflow_dispatch'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
