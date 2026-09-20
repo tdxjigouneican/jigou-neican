@@ -101,19 +101,7 @@ def find_files(data_dir, date=None):
             title = it.get('title', '无标题')
             # 优先原文(T003 preview),其次 AI 摘要
             body = it.get('body') or it.get('full') or it.get('ai_summary') or ''
-            pub = it.get('pub_time', '')
-            # 优先 stock_names (中文名+代码),其次 stocks (代码)
-            stock_names = it.get('stock_names', [])
-            stocks = it.get('stocks', [])
-            if stock_names and stocks:
-                stock_str = ', '.join(f"{c}{n}" for c, n in zip(stocks, stock_names))
-            elif stock_names:
-                stock_str = ', '.join(stock_names)
-            elif stocks:
-                stock_str = ', '.join(stocks)
-            else:
-                stock_str = '未识别'
-            text = f"【机构内参】{title}\n时间：{pub}\n个股：{stock_str}\n\n{body}"
+            text = f"【机构内参】{title}\n\n{body}"
             tmp = p.parent / f'.zsxq_push_{rec_id}.md'
             tmp.write_text(text, encoding='utf-8')
             out.append(tmp)
@@ -133,7 +121,14 @@ def read_md(md_path):
     body = text
     if lines and lines[0].startswith('【机构内参】'):
         title = lines[0].replace('【机构内参】', '').strip()
-        body = '\n'.join(lines[1:]).strip()
+        # 过滤掉"时间:"和"个股:"开头的前缀行
+        body_lines = []
+        for ln in lines[1:]:
+            s = ln.strip()
+            if s.startswith('时间：') or s.startswith('时间:') or s.startswith('个股：') or s.startswith('个股:'):
+                continue
+            body_lines.append(ln)
+        body = '\n'.join(body_lines).strip()
     return title, body
 
 
@@ -159,7 +154,8 @@ def main():
     if not files:
         print(f'no md files found in {args.input}/{args.date or "latest"}'); return
 
-    files = files[:30]
+    # 不限制条数,全部推送
+    # files = files[:30]
 
     if args.dry_run:
         print(f'[DRY-RUN] would push {len(files)} topics:')

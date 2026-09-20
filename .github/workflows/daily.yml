@@ -2,7 +2,8 @@ name: daily-jigou-neican
 
 on:
   schedule:
-    - cron: '0 12 * * *'  # UTC 12:00 = Asia/Shanghai 20:00
+    # 每 10 分钟跑一次(UTC),内部 step 判断是否在工作日 07:00-17:00 北京时间
+    - cron: '*/10 * * * *'
   workflow_dispatch:
     inputs:
       mode:
@@ -30,6 +31,23 @@ jobs:
     timeout-minutes: 30
 
     steps:
+      - name: Trading hours gate
+        shell: bash
+        run: |
+          # 仅在工作日 (周一-周五) 北京时间 07:00-17:00 (含) 之间跑
+          TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S %Z %w'
+          DOW=$(TZ='Asia/Shanghai' date '+%w')   # 0=周日 6=周六
+          HOUR=$(TZ='Asia/Shanghai' date '+%H')
+          MIN=$(TZ='Asia/Shanghai' date '+%M')
+          DECIMAL=$((10#$HOUR * 100 + 10#$MIN))
+          if [ "$DOW" -ge 1 ] && [ "$DOW" -le 5 ] && [ "$DECIMAL" -ge 700 ] && [ "$DECIMAL" -le 1659 ]; then
+            echo "[gate] trading hours OK (DOW=$DOW HHMM=$DECIMAL)"
+            exit 0
+          else
+            echo "[gate] skip (DOW=$DOW HHMM=$DECIMAL)"
+            exit 78   # neutral skip, 不算失败
+          fi
+
       - name: Checkout
         uses: actions/checkout@v4
 
