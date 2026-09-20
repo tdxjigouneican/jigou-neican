@@ -12,8 +12,12 @@ KB_ID = os.environ.get('IMA_KB_ID', 'eD_gxNj7vxloDEYzjG9_9LEdABb_WBeI5Tqjs41lm_I
 FOLDER_ID = os.environ.get('IMA_FOLDER_ID', 'folder_7506378096640223')
 CLIENT_ID = os.environ.get('IMA_CLIENT_ID', '')
 API_KEY = os.environ.get('IMA_API_KEY', '')
+# IMA media_type 实际值(从 IMA 文档/客服确认前临时占位, 7 已被实测为不合法)
+# 已知合法: 1=pdf, 3=docx, 4=pptx, 5=xlsx, 14=txt, 13=image
+# .md 待 IMA 文档确认 - 暂用 14 (txt) 兼容,add_knowledge 时 media_type=14
+# 注意:2026-09-20 实测 media_type=7 报 220001 invalid
 MEDIA_TYPE_MAP = {'pdf':1,'doc':3,'docx':3,'ppt':4,'pptx':4,'xls':5,'xlsx':5,
-                  'md':7,'markdown':7,'txt':14,'jpg':13,'jpeg':13,'png':13}
+                  'md':14,'markdown':14,'txt':14,'jpg':13,'jpeg':13,'png':13}
 
 H_AUTH = {
     'ima-openapi-clientid': CLIENT_ID,
