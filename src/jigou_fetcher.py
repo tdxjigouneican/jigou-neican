@@ -130,11 +130,35 @@ def main():
 
     os.makedirs(args.output, exist_ok=True)
     if args.mode == 'today':
-        items, total = fetch_list(page=1, page_size=50)
-        if not items:
-            print('ERR: no items'); sys.exit(1)
-        n = save_md(items, args.output)
-        print(f'OK today: total={total} got={len(items)} wrote={n} md files')
+        # 翻页直到耗尽当天数据(源站每天 ~90 条, 只抓 page1 会漏掉当天早些时候发布的)
+        today = datetime.now().strftime('%Y-%m-%d')
+        all_items = []
+        page = 1
+        total = 0
+        pages_ok = 0
+        while page < 30:
+            items, tot = fetch_list(page=page, page_size=50)
+            if not items:
+                print(f'  page {page}: empty, retrying...')
+                time.sleep(3)
+                items, tot = fetch_list(page=page, page_size=50)
+            if not items:
+                print(f'  page {page}: FAILED after retry')
+                break
+            pages_ok += 1
+            total = tot or total
+            day_items = [it for it in items if (it.get('pub_time') or '')[:10] == today]
+            old_items = [it for it in items if (it.get('pub_time') or '')[:10] < today]
+            all_items.extend(day_items)
+            if old_items and not day_items:
+                print(f'  page {page}: reached pre-{today} data, stop')
+                break
+            page += 1
+            time.sleep(0.3)
+        if not pages_ok:
+            print('ERR: 0 pages fetched'); sys.exit(1)
+        n = save_md(all_items, args.output)
+        print(f'OK today: total={total} pages={pages_ok} today_items={len(all_items)} wrote={n} md files')
     elif args.mode == 'backfill':
         if not args.start or not args.end:
             print('ERR: --start and --end required'); sys.exit(1)
