@@ -3,25 +3,32 @@
     "rec_id": "1064854",
     "title": "【中信互联网】恒科资金流周度追踪",
     "body": "时间：2026-11-09 08:31\n个股：未识别\n\n截至11月6日，恒生科技指数月内上涨8.6%。\n\n\n\n估值层面，截至11月6日，恒生科技指数NTM PE为18.30x，较上周（ 16.85x ）有所上升。\n\n\n=== 完整正文 ===\n资金层面，截至11月6日，近30日南向资金累计净流入-264亿元，该指标相较上周（ -226亿元）略有下降，近期观察到了南向资金的流入规模收缩。\n\n\n\n卖空方面，截至11月6日，港股卖空成交额在市场成交总额占比为19.15%，较上周（ 19.41% ）略有下降。\n\n\n\n分公司看，截至11月6日，腾讯、美团、快手、阿里港股通持股占比分别为12.0%、18.7%、20.3%、9.7%，腾讯、阿里、美团、快手、哔哩哔哩未平仓卖空数占总股本比例分别为0.7%、0.9%、2.4%、9.7%、10.4%。",
-    "error": "Expecting value: line 1 column 1 (char 0)"
+    "ai_summary": "中信互联网发布恒生科技指数资金流周度追踪。截至11月6日，恒科指数月内上涨8.6%，NTM PE回升至18.30x（上周16.85x）。南向资金近30日累计净流出264亿元，较上周226亿元流出规模扩大，显示近期流入动能减弱。港股整体卖空占比19.15%，较上周19.41%微降。重点个股持仓方面，快手港股通持股占比最高达20.3%，哔哩哔哩未平仓卖空数占总股本比例最高为10.4%，腾讯仅0.7%。",
+    "tags": [
+      "港股",
+      "资金流",
+      "互联网",
+      "科技"
+    ],
+    "importance": 2
   },
   {
     "rec_id": "1064855",
     "title": "【中信组合策略|周思考】先交易反弹",
     "body": "时间：2026-11-09 08:32\n个股：未识别\n\n美国中选蓝潮+美伊问题预期缓和，“油+AI”这一今年冠绝全球的【哑铃组合】遭受重创。如之前沟通，风险资产在当下宏观预期下仍然不利。但短期而言，上调短期权益资产（尤其是人民币资产）权重，先交易一波反弹。\n\n\n=== 完整正文 ===\n1、“黑色星期四”令全球多资产普遍回撤\n\n\n\n1）油、美日韩股票、铜、豆普遍回撤，A股、港股、黄金独立上涨。尤其是港股，港股VS美股的滚动月度相关性已经转负，这在权益资产内部是罕见的。我们认为主要原因来自前期超跌（港股跌得更早）后资金回流、创新药业绩指引密集期、与AI硬件不敏感等因素有关。如果市场持续Price in AI监管预期，可以重视【港股】（至少可以获得相对独立的定价）。\n\n\n\n2）美国蓝潮是否会让AI监管真正落地并影响Capex和EPS预期其实尚未可知，但多资产的对冲性价比提升是确定的\n\n\n\n我们认为AI监管背景下，多资产间的相关性重新降低，是未来最重要的结构性变化。过去，由于全球风险资产的EPS都被绑定在AI，跨资产的相关性持续提升，并已经触达历史高位。最近，跨资产的风险分散效果正在回归。\n",
-    "error": "Expecting ',' delimiter: line 2 column 29 (char 30)"
+    "error": "Expecting value: line 1 column 1 (char 0)"
   },
   {
     "rec_id": "1064856",
     "title": "【华泰金融周核心】稳市政策持续加力，加配优质金融",
     "body": "时间：2026-11-09 08:33\n个股：未识别\n\n证券：底部政策催化，战略配置价值抬升。国常会要求完善资本市场稳市机制、增强股市内在稳定性；央行千亿互换便利落地，多家券商完成首批股票买入，政策底部催化有望改善市场流动性。当前券商板块估值处低位，市场预期有望改善；券商中长期资金配置力度提升，战略配置价值显现。\n\n\n=== 完整正文 ===\n银行：稳健配置机会。金融工作报告强调流动性充裕、推进重点领域风险化解，有助于稳定资产质量与融资环境。互换便利落地，回购增持再贷款加力，回购增持再贷款利率降至1%。银行红利配置需求提升，业绩韧性强，把握稳健机会。\n\n保险：配置优质龙头。上周AH两市反弹，保险股普遍大幅上涨。市场预期边际改善，把握低位保险的修复机会。部分险企红利能见度较高、DPS增长确定性强，可重点把握机会.",
-    "ai_summary": "华泰金融周报认为稳市政策持续加码，金融板块战略配置价值凸显。国常会要求完善资本市场稳市机制，央行千亿互换便利已落地，多家券商完成首批股票买入，券商板块估值处历史低位，预期有望改善。银行方面，金融工作报告强调推进重点领域风险化解，回购增持再贷款利率降至1%，银行红利配置需求提升，业绩韧性强。保险板块随上周AH反弹大涨，优质龙头险企DPS增长确定性较高，建议把握低位修复机会。",
+    "ai_summary": "华泰证券发布金融周度策略报告，核心观点为'稳市政策持续加力，加配优质金融'。政策层面，国常会要求完善资本市场稳市机制、增强股市内在稳定性；央行千亿互换便利已落地，多家券商完成首批股票买入操作。具体标的上：券商板块估值处低位，战略配置价值抬升；银行受益于流动性充裕及重点领域风险化解推进，红利配置需求提升，回购增持再贷款利率降至1%；保险AH股反弹后估值修复，部分险企股息率较高、DPS增长确定性强。整体判断政策底部催化明确，金融机构具备中短期布局窗口。",
     "tags": [
+      "金融",
       "券商",
       "银行",
       "保险",
-      "政策",
-      "金融"
+      "政策"
     ],
     "importance": 3
   },
@@ -29,24 +36,26 @@
     "rec_id": "1064857",
     "title": "周观点更新：物理AI&技术升级，周更新",
     "body": "时间：2026-11-09 08:34\n个股：未识别\n\n关于物理AI&AI硬件我的再思考：\n\n物理AI：1）重申高质量具身数据是决定物理AI是否能实现商业化落地的关键，也是大语言模型与世界大模型之间训练难度的区别，也是ego、umi和真机数采之间的区别，在这个维度上看，触觉传感器、真机数据重要性??在提升，2）同时国内外模型的差距，决定了海外跟国内世界大模型应用的领域：海外可以选择具身，国内（如果不考虑本体）优先选择了内容生成和端侧。\n\n\n=== 完整正文 ===\n关于AI硬件：前期无论是大家对于A的 arr还是美国中期选举，或者是大厂Capex的下修&砍单的问题，我们认为当下很多股价已经包含了诸多悲观预期，上一轮是伴随大厂持续上修而不断上移的供应链景气度，这一轮我们认为会是新的下游需求叙事伴随的产业链供给端的再平衡，这个维度看AI的本质也是一场周期之旅，万物节点的开端都需要【平衡】，例如涨价太多需要重回平衡，需求高增也需要供给来平衡。\n\n\n\n相关标的：\n\n1）物理AI：开普云（A股真机数采服务第一股、MF国内真机最大）、峰岹科技、福莱新材、江顺科技、春光科技、创维数字、能科科技、海天",
-    "ai_summary": "本周内观点围绕物理AI与AI硬件展开。物理AI维度强调高质量具身数据是商业化落地的核心壁垒，触觉传感器与真机数采价值提升，国内外模型差异导致海外优先具身、国内侧重内容生成与端侧。AI硬件方面，前期股价已消化大厂Capex下修等悲观预期，本轮行情将由新下游需求叙事驱动产业链供给端再平衡。列举PCB、散热材料、光模块、玻璃基板等相关标的。",
+    "ai_summary": "2026-11-09周观点聚焦物理AI与AI硬件产业链。核心逻辑：1）高质量具身数据是物理AI商业化关键，触觉传感器与真机数采价值提升；2）国内外模型差距决定应用分野，海外主攻具身，国内优先内容生成与端侧；3）AI硬件股价已消化Capex下修等悲观预期，本轮将由新下游需求叙事驱动供给端再平衡。重点跟踪物理AI（开普云、峰岹科技等）、PCB（景旺电子、深南电路等）、散热材料、光模块、玻璃基板及元器件等环节。",
     "tags": [
       "AI算力",
       "PCB",
       "光模块",
-      "机器人"
+      "消费电子",
+      "涨价"
     ],
-    "importance": 3
+    "importance": 4
   },
   {
     "rec_id": "1064858",
     "title": "短期边际变化显著品种",
     "body": "时间：2026-11-09 08:35\n个股：未识别\n\n1、肇民科技：新进对接Open AI，T链进展全面铺开，机器人产品占比高、利润大，当前位置极具性价比\n\n\n\n2、双环传动：北美大客户部分减速器独供，壁垒高、格局好，环动分拆取消后公司掣肘不在，各业务部门全面对接具身智能，客户、产品具有大量超预期空间\n\n\n=== 完整正文 ===\n3、模塑科技：品类持续拓展，从身体结构件、散热结构件到电子皮肤，联合HWK已送样T客户电子皮肤\n\n\n\n4、大千生态（领动股份）：运动机器人属于高难度技术闭环、清晰付费意愿场景，12月公司重大发布，深辰凯动新一轮融资在即，大千持股60%，性价比极高\n\n\n\n5、恒帅股份：正式获得大客户批量订单，进入量产爬坡；电机、丝杠、减速器等高asp核心零部件供应商中市值最具性价比\n\n\n\n6、日盈电子：t链合作近期新增品类；启元链核心标的，明年业绩有望爆发，市值小弹性大\n\n\n\n7、均胜电子：灵巧手亮相北美展会，年内有望推出升级产品，目前与多家头部公司对接；具身智能领域，多类核心部件在国内外客户逐步放量",
-    "ai_summary": "2026年11月9日，机构梳理短期边际变化显著的机器人产业链标的。肇民科技新进对接OpenAI，T链全面铺开；双环传动取消分拆后各业务对接具身智能，北美减速器独供壁垒高；均胜电子灵巧手亮相北美展会年内有望升级，多类核心部件放量；恒帅股份获大客户量产订单；大千生态持股60%的深辰凯动拟新一轮融资，运动机器人付费场景清晰。整体聚焦特斯拉链与华为链相关机器人零部件及集成商，性价比突出。",
+    "ai_summary": "聚焦人形机器人/T链核心标的，边际变化显著。肇民科技新进对接Open AI，T链全面铺开，机器人业务利润占比高；双环传动北美大客户减速器独供，分拆取消后掣肘消除，深度对接具身智能；恒帅股份获大客户批量订单进入量产爬坡，电机丝杠减速器等核心零部件市值性价比突出；均胜电子灵巧手亮相北美展会，年内有望升级，多类部件国内外放量。模塑科技、日盈电子、大千生态亦有品类拓展或融资进展。",
     "tags": [
       "机器人",
-      "特斯拉链",
-      "具身智能",
+      "半导体",
+      "出海",
+      "华为链",
       "业绩"
     ],
     "importance": 4
@@ -55,13 +64,12 @@
     "rec_id": "1064859",
     "title": "【开源计算机】北美科技巨头持续加码算力，企业Agent加快落地",
     "body": "时间：2026-11-09 08:36\n个股：未识别\n\n北美四巨头资本投入持续扩张，长期订单支撑AI基础设施建设\n\n北美四大科技巨头延续AI基础设施投入，第三季度现金购置物业与设备支出环比均有增长，服务器、网络设备与数据中心成为重点方向。\n\n\n=== 完整正文 ===\n需求端，谷歌、亚马逊与微软剩余履约义务持续扩大，企业通过多年期合同提前锁定算力，为后续产能建设提供需求支撑；Meta则通过模型迭代、内容推荐与广告提效推动投入回报。AI云商业兑现可沿资本投入、订单锁定与收入确认逐步跟踪，客户结构、合同期限及交付进度成为重要观察指标。随着投入规模提升，经营现金流、外部融资与融资租赁共同参与扩产，设备交付、电力及基建配套对实际投放节奏的影响进一步增强。\n\n企业Agent走向托管与跨工具协作，模型能力及国产生态同步完善\n\n本周AI产业围绕企业部署、多模态交互与任务执行持续迭代。模型端，腾讯发布混元Hy4正式版，新增视觉与电脑操作能力；百度开放ERNIE 5.5 Flash Base权重，支持长上下文推理；OpenAI上线GPT-Image-2.6，拓展动图与矢量图生成。应用端，DeepSeek",
-    "ai_summary": "北美四巨头Q3现金购置物业与设备支出环比增长，服务器、网络设备与数据中心为投资重点，谷歌、亚马逊、微软剩余履约义务持续扩大。企业Agent加速落地，DeepSeek Harness推出创造模式、Kimi Hosted Agents上线托管服务；国产模型端腾讯混元Hy4正式版、百度ERNIE 5.5 Flash Base权重开放、LongCat-2.5推进国产算力优化。11.2-11.6计算机指数涨9.60%，AI应用指数涨7.71%，前10名个股周涨幅均超18%。受益标的覆盖寒武纪、海光信息、工业富联、浪潮信息等国产算力及智谱、MiniMax等大模型厂商。",
+    "ai_summary": "2026年Q3北美四巨头AI资本开支持续扩张，剩余履约义务扩大锁定长期需求，服务器/网络设备/数据中心为核心方向。企业Agent向托管与跨工具协作演进，DeepSeek Harness、Kimi Hosted Agents等产品降低部署门槛；国产模型同步迭代，腾讯混元Hy4正式版、百度ERNIE 5.5 Flash开放权重。本周计算机指数涨9.60%领涨主要宽基，AI应用/算力指数分别涨7.71%/4.73%，个股青云科技+28.69%、优刻得+20.58%领跑。建议关注算力建设向订单交付转化及AI融入企业工作流机会。重点标的：寒武纪、海光信息、工业富联、东山精密、胜宏科技、浪潮信息等。",
     "tags": [
       "AI算力",
-      "信创",
+      "半导体",
       "自主可控",
-      "业绩",
-      "超预期"
+      "业绩"
     ],
     "importance": 4
   },
@@ -69,11 +77,13 @@
     "rec_id": "1064860",
     "title": "【中金互联网】互联网周思考：民主党赢得参众两院对互联网板块影响如何？<br />",
     "body": "时间：2026-11-09 08:37\n个股：未识别\n\n若新建数据中心监管趋严，具备可交付产能的云厂商相对受益。\n\n两党在AI监管力度上存在分歧，民主党更强调安全和社会成本约束。考虑到联邦层面监管立法仍面临较高门槛，短期更需关注州及地方政府在电力成本分摊、税收优惠调整和土地审批等方面可能采取的措施，及其对AI数据中心建设进度和成本的影响。\n\n\n=== 完整正文 ===\n我们认为，虽然供给受限并不等于需求减弱（CBRE统计口径下1H26北美主要数据中心市场空置率1.4%，在建容量的80.4%已预租），但需求更依赖于叙事，而市场目前明显偏好半导体空头叙事，对超大规模云厂商的叙事则更倾向于相对积极状态。\n\n\n\n外部环境骤变，港股反而迎来流动性修复，当前更应关注β驱动下估值修复的空间。\n\n2026年互联网板块承压，一方面源于消费景气偏弱、行业竞争及新业务投入对盈利和股东回报的制约，另一方面则是受海外高利率、全球资金向AI硬件集中等外部因素影响。\n\n本次美国中期选举后，两党相互制衡或将加强，目前进入市场预期的包括地缘风险边际缓和、美债利率下行预期升温等，以及模糊的AI开支见顶猜测（或许立即就受到",
-    "ai_summary": "中金互联网团队认为，民主党掌控参众两院后，新建数据中心监管或趋严，具备可交付产能的云厂商相对受益。短期需关注州政府层面在电力成本分摊、税收优惠调整、土地审批等方面的措施对AI数据中心建设的影响。尽管供给受限，但1H26北美主要数据中心市场空置率仅1.4%，80.4%在建容量已预租，需求端未减弱。市场当前偏好半导体空头叙事，对超大规模云厂商叙事偏积极。美国中期选举后地缘风险边际缓和、美债利率下行预期升温，叠加AI资本开支敞口较小的互联网公司估值偏低，有望阶段性承接资金再配置，港股互联网迎来β驱动的估值修复窗口。",
+    "ai_summary": "中金互联网团队于2026年11月9日发布周度思考，核心观点：1）美国中期选举民主党赢得参众两院后，新建数据中心监管趋严可期，具备可交付产能的云厂商相对受益；当前北美数据中心空置率仅1.4%，80.4%在建容量已预租，供给受限但需求叙事仍存分歧。2）外部环境变化带来港股互联网板块β驱动估值修复机会——美债利率下行预期升温、地缘风险边际缓和、AI资本开支放缓猜测浮现，低估值且AI敞口较小的互联网公司有望承接资金再配置。",
     "tags": [
       "数据中心",
+      "AI算力",
       "出海",
-      "业绩"
+      "政策",
+      "周期"
     ],
     "importance": 3
   },
@@ -81,13 +91,12 @@
     "rec_id": "1064861",
     "title": "AI影视行情持续演绎，关注春节档催化及低位互联网、AI应用",
     "body": "时间：2026-11-09 08:38\n个股：未识别\n\n一、【AI影视】AI中长剧降本增效及内容形式升级是本轮行情核心产业逻辑，AI降本+边审边播有望改善制作效率及ROI。春节档及12月字节Force大会催化丰富，《流浪地球3》计划27年春节档上映，博纳AI电影《计划外：广寒行动》发布新宣传片，世界模型迭代有望进一步推动内容生产变革。短剧治理或扰动短期情绪，但不改合规AI影视产业趋势。\n\n\n=== 完整正文 ===\n重点关注：#中国电影、#博纳影业、#芒果超媒、#上海电影、#奥飞娱乐 等\n\n\n\n二、【港股互联网】算力建设预期扰动市场，港股互联网估值仍处低位，优质公司长期竞争力未发生根本变化。重点推荐#腾讯：11月4日发布混元Hy4，能力提升，已接入WorkBuddy、CodeBuddy、元宝、企业微信等产品，模型与应用协同加速商业化。WorkBuddy累计完成超90亿次任务请求，覆盖超50%中国企业500强，后续关注Hy4开源、Flash版本及AI应用商业化进展。\n\n此外关注#金山云（云业务弹性）、#金山软件 等。\n\n\n\n三、【AI营销及短剧出海】AppLovin、Unity等海外AI",
-    "ai_summary": "多赛道聚焦AI应用落地与事件催化：①AI影视逻辑为中长剧降本增效+边审边播改善ROI，春节档《流浪地球3》及12月字节Force大会为催化；②港股互联网估值低位，腾讯混元Hy4发布加速模型与应用协同，WorkBuddy已服务超50%中国500强企业；③AI营销及短剧出海关注字节PineDrama海外商业化机会；④游戏板块网易27年产品周期明确，《无限大》定档1月，50亿美元回购延长至29年；⑤出版板块盈利改善叠加高股息配置价值。",
+    "ai_summary": "2026年11月9日机构研报聚焦AI影视与港股互联网机会。AI中长剧降本增效为核心逻辑，春节档《流浪地球3》、字节Force大会为催化；港股互联网估值低位，腾讯混元Hy4已接入企业微信等产品商业化加速。此外AI营销及短剧出海（字节PineDrama）具估值弹性；游戏板块重点关注网易27年产品周期及50亿美元回购；出版板块三季报盈利改善，南方传媒、中南传媒、分众传媒兼顾业绩修复与高股息配置价值。",
     "tags": [
-      "AI算力",
       "出海",
-      "游戏",
+      "数据要素",
       "业绩",
-      "分红"
+      "涨价"
     ],
     "importance": 4
   },
@@ -95,27 +104,25 @@
     "rec_id": "1064862",
     "title": "【国金电子】半导体芯片观点更新：反弹优先关注估值及位置合适，且兼具高产业景气度的模拟及端侧板块",
     "body": "时间：2026-11-09 08:39\n个股：未识别\n\n模拟行业仍处于供需紧张的高景气阶段，海外龙头厂商涨价且交期持续拉长。国内模拟公司平台化布局初显成效，数据中心、服务器、汽车等非消费类下游占比逐年提升，行业上行周期有望持续。龙头公司明年估值不足30x，低于历史估值以及海外龙头估值，#建议关注：圣邦股份、纳芯微、思瑞浦、南芯科技、杰华特、晶丰明源、艾为电子、帝奥微、必易微等\n\n\n=== 完整正文 ===\n端侧AI加速落地，正处从技术验证迈向商业化的关键节点。1）AI应用及端侧有望成为AI落地的更大场景，2）27年国内SoC龙头厂商都有望进入产品周期，推出更高算力、更先进制程产品，有望与行业周期形成共振，3）经过2年消化估值后，行业明年平均估值不足30x，估值低位置低。我们持续看好国内SoC厂商的卡位及竞争优势，充分受益端侧落地带来的升级，叠加合理的估值以及位置，#建议关注：瑞芯微、恒玄科技、乐鑫科技、晶晨股份、泰凌微、炬芯科技、中科蓝讯、全志科技、星宸科技、富瀚微、安凯微等。",
-    "ai_summary": "国金电子团队更新半导体芯片观点，聚焦两大方向：1）模拟芯片：行业仍处供需紧张的高景气阶段，海外龙头持续涨价且交期拉长，国内公司平台化布局成效显现，数据中心、服务器、汽车等非消费类下游占比提升，龙头明年估值不足30x，推荐圣邦股份、纳芯微、思瑞浦、南芯科技等；2）端侧AI/SoC：正从技术验证迈向商业化关键节点，2027年国内SoC龙头将推出更高算力先进制程产品与行业周期共振，平均估值不足30x，推荐瑞芯微、恒玄科技、乐鑫科技、晶晨股份等。",
+    "ai_summary": "国金电子发布半导体芯片观点更新（2026-11-09）。模拟行业仍处供需紧张高景气阶段，海外龙头持续涨价且交期拉长，国内模拟公司平台化布局见效，数据中心、汽车等非消费下游占比提升，建议关注圣邦股份、纳芯微、思瑞浦等。端侧AI加速落地，27年国内SoC龙头有望推出更高算力产品，行业平均估值不足30x，位置较低，建议关注瑞芯微、恒玄科技、乐鑫科技等。",
     "tags": [
       "半导体",
       "AI算力",
-      "消费电子",
-      "自主可控",
-      "业绩"
+      "涨价",
+      "自主可控"
     ],
-    "importance": 3
+    "importance": 4
   },
   {
     "rec_id": "1064863",
     "title": "【东吴电新】人形机器人：巨头纷纷加码数采及模型迭代，数据飞轮加速本体量产，持续看好！",
     "body": "时间：2026-11-09 08:40\n个股：未识别\n\n事件：\n\n\n\n#苹果披露HALO机器人大脑、仿真数据驱动自主控制。苹果研究团队提交HALO人形机器人自主控制系统论文，开放数据生成、模型训练及部署代码，覆盖动作生成、跟踪及任务编排等环节。在6个未经预先扫描或建图的真实环境中完成360次单项任务测试，平均成功率91%，组合任务平均成功率70%；仿真数据生成仍需人工编写提示词及设计动作关键帧，触觉感知为后续改进方向。\n\n\n=== 完整正文 ===\n#特斯拉加码Optimus数采、真实数据需求提升。新增数采协调、运营及夜班管理等岗位，覆盖Fremont、Marina del Rey等地，并设置午班、夜班采集岗位，通过动作捕捉及物体操作积累训练数据，模型迭代与场景验证持续拉动高质量真实数据需求。\n\n\n\n#谷歌发布Genie4、世界模型持续升级。10月27日，谷歌DeepMind发布Genie 4，支持实时生成交互世界、自然语言修改场景及同步音频生成，有望丰富具身智能仿真训练环境。\n\n\n\n#FigureAI加码数据、模型泛化取得突破。通过Index采集全球人类行为数据，计划未来12个月投入",
-    "ai_summary": "东吴电新发布人形机器人行业点评，认为头部企业加速数采及模型迭代，数据飞轮有望推动本体量产。苹果HALO系统在6个无扫描环境中完成360次任务，平均成功率91%；特斯拉新增夜班数采岗位并建设百万台级产线，预计27年底对外交付；Figure AI投入超10亿美元采集全球行为数据，Helix 2..5零样本测试成功率由9%升至56%；Anthropic Opus 5.5成本降低40%，超百万美元客户达250家。首推物理AI垂类大模型标的及量产领先T链，推荐汇川技术、科达利、雷赛智能、宇树科技等。",
+    "ai_summary": "东吴电新团队发布人形机器人行业深度点评，聚焦巨头数采与模型迭代最新进展。苹果HALO系统真实环境单项任务成功率91%，组合任务70%；特斯拉Optimus百万台级产线进入早期生产，同步加码数采运营；谷歌发布Genie4支持实时交互世界生成；Figure AI Helix 2.5零样本测试成功率由9%跃升至56%，年内投入超10亿美元；Anthropic Opus 5.5成本降40%，千万美元级客户超250家；OpenAI预计27年演示自研原型。团队重申数据飞轮加速量产逻辑，首推物理AI垂类及T链优质标的，关注汇川技术、科达利、三花智控、宇树科技等。",
     "tags": [
       "机器人",
+      "AI算力",
       "数据要素",
-      "苹果链",
-      "出海",
-      "自主可控"
+      "出海"
     ],
     "importance": 4
   },
@@ -123,240 +130,240 @@
     "rec_id": "1064870",
     "title": "天风通信 | 海能达：摩托罗拉MSI新高启示，#重视海能达的拐点和新机遇！",
     "body": "时间：2026-11-09 10:57\n个股：未识别\n\n1、摩托罗拉MSI市值新高突破850亿美金，在手订单166亿美元创历史新高，Q3订单创纪录、同比增超20%，全年指引年内第三次上调至约130.5亿美元收入，并给出2027年约142.5亿美元的初步框架，#且近期13亿美元现金收购了反无人机公司D-Fend。\n\n\n=== 完整正文 ===\nMSI启示：一方面证明全球专网市场蛋糕足够大、同时需求提速增长；另一方面，真金白银定价全球反无系统赛道，新业务爆发可期。#海能达是MSI全球最有力竞对、当前差距即未来弹性。\n\n\n\n2、#海能达拐点已在利润表、诉讼历史包袱出清尾声： 1）公司扣非利润Q2为1亿（同比+70%），Q3为1.84亿（同比+180%），利润率显著改善，订单充足；2）公司新一期股权激励考核26-28年扣非利润4亿/5亿/6亿（彰显信心）；3）公司24年已一次性计提诉讼赔偿等费用37.6亿元，MSI诉讼进入尾声，除了常规计提，历史包袱相对出清。\n\n\n\n3、#反无市场全球已定价、重视海能达新机遇： 城市级反无是一整套系统（侦查→研判→打击，涵盖光电、无线电、通信、雷达、平台、终端",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064871",
     "title": "继续看好【智微智能】，业绩高增验证算力景气，物理AI持续放量增长｜中信证券计算机",
     "body": "时间：2026-11-09 10:58\n个股：未识别\n\n三季报业绩高增，订单与备货信号积极\n\n-2026年前三季度公司营收48.53亿元（+63.3%），归母净利润6.77亿元（+417.3%）；Q3单季营收18.04亿元（+75.8%），归母净利润2.89亿元（+888.1%），扣非归母净利润2.67亿元（+1206.2%），业绩增长势头强劲。\n\n\n=== 完整正文 ===\n-截至Q3末，预付款项46.73亿元，较年初增长1676.9%；合同负债10.84亿元，较年初增长1953.4%。公司称业绩增长主要受主营及智算业务订单增加驱动，预付款增长主要系原材料备货。订单、备货与业绩共振，关注后续交付及收入兑现。\n\n\n\n物理AI加速落地，公司“控制器+数据采集”双线卡位\n\n-数据侧：公司推出UMI-2002E数据采集控制器，并布局核心板、智能手套等无本体采集方案，切入多传感器融合与真实场景数据采集，为具身模型训练提供硬件基础。\n\n\n\n-控制侧：公司布局人形、四足、工业及服务机器人等产品，覆盖大脑、小脑及一体化控制器。最新披露，智擎Thor大脑控制器新增智元等头部客户、进入智元首批“A链”供",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064872",
     "title": "【华创宏观·张瑜团队】全球流动性与信用风险指标走弱——全球货币转向跟踪第17期",
     "body": "时间：2026-11-09 10:59\n个股：未识别\n\n1、【流动性的“数量”跟踪信号：美联储缩表正在缓慢进行】截至2026年10月28日，美联储准备金规模下降至2.9万亿美元左右，准备金/GDP比小幅下降至9%左右；准备金规模继续处于缓慢收缩状态。\n\n\n=== 完整正文 ===\n2、【流动性的“价格”跟踪信号：非银流动性指标近期略有恶化】10月中旬以来，SOFR-EFFR利差、SOFR-IOER利差开始连续转正，反映非银流动性存在恶化迹象。\n\n\n\n3、【10月以来美欧国债买卖价差均走阔】法国作为本轮欧债风波的核心风险国，国债买卖价差走阔幅度较大；同时10月美欧央行持有国债占国债余额的比重均进一步下降。\n\n\n\n4、【全球信用风险溢价开始出现走阔迹象】10月以来，美国、欧洲、日本、亚洲（除日本）以及新兴市场的信用债CDS价格普遍出现走高。",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064873",
     "title": "【申万机器人】机器人成为市场主线，建议把握β机会！",
     "body": "时间：2026-11-09 11:00\n个股：未识别\n\n#本轮的变化在哪里？\n\n1）模型端是最大变化：OpenAI重启机器人软硬件布局，GPT6-Astra测评得分登顶榜单，在当前模型进展迷茫的情况下，有望加速模型技术路线收敛，加快产业落地，解决机器人最大瓶颈问题。\n\n\n=== 完整正文 ===\n2）数据采集成为新方向：模型公司下场做机器人，会加大算力和数据投入，具身GPT时刻至少需要1亿小时数据，当前数据量为百万级，是斜率最为陡峭的环节，因此带来新方向、新逻辑、新标的。3）O链成为增量方向：OpenAI将攻克大脑，但同时也会做硬件，目前正在招兵买马组建团队和产品预研，未来也会陆续对接国内供应商，带来更多产业信息。\n\n\n\n#如何看待持续性？\n\n三季报之后的年末往往是主题演绎的黄金窗口，机器人板块经历两周反弹，独立于大盘领涨，确认本轮行情为反转并非反弹，我们认为本轮的持续性超过今年任何一次。\n\n\n\n#后续催化剂是什么？1）特斯拉将在年内发布V3新品，12月3日召开股东大会；2）OpenAI后续发布GPT-7，将加入更多机器人数据；3）其他潜在催化包括T供应链量产交付、O链对接审厂等等，机",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064874",
     "title": "重视【AI应用】：AI安全、AI4S、AI EDA、AI企业服务四条主线共振｜中信证券计算机",
     "body": "时间：2026-11-09 11:01\n个股：未识别\n\nAI应用从技术突破走向商业兑现\n\n-AI应用正沿“容错性与可验证性”梯度兑现：Coding率先规模化，AI安全受益于刚性需求，AI4S、AI EDA走向专业工作流，AI企业服务加速进入核心业务流程。\n\n\n=== 完整正文 ===\nAI安全：从可选项走向基础设施\n\n-#模型能力越强、攻击门槛越低，安全需求越刚性。海外CrowdStrike的AIDR业务ARR环比增长超250%，验证AI安全商业化提速。\n\n\n\n-国内关注业绩拐点：深信服26H1安全业务收入15.87亿元、同比+10.57%；绿盟科技26H1 AI安全订单1.17亿元。#AI安全有望打开增量市场，带动产品结构与盈利改善。\n\n\n\nAI4S：从模型预测走向科研闭环\n\n-10月Anthropic公布蝎毒蛋白设计实验：Claude历时64小时生成31.8万个候选蛋白，经湿实验测试，17个达到结合标准，验证Agent自主设计与实验协同能力。\n\n\n\n-商业化同步突破：剂泰科技与礼来达成AI驱动LNP递送合作，里程碑最高11亿美元；晶泰控股26H1 AI4S解决方案收入同比+136.",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064875",
     "title": "【PCB产业链】调整后看业绩兑现，供需偏紧与技术升级仍是主线",
     "body": "时间：2026-11-09 11:02\n个股：未识别\n\n#近两周PCB板块随海外硬件链回调，市场集中担忧AI资本开支放缓、供应链瓶颈影响交付，以及新产能投放后的竞争格局。我们认为，后续硬件投资仍要回到需求和产业链竞争力：AI服务器向机柜级系统演进，交换机速率持续提升，带动高层数、大尺寸、低损耗PCB及配套材料升级。\n\n\n=== 完整正文 ===\n中国大陆已形成从材料、设备到板厂的完整配套，2025年PCB产值占全球一半以上；在后续硬件链中，PCB是国内产业链具备较强规模与配套优势的环节。高端有效产能仍受材料、良率和客户认证约束，今明年的紧缺趋势值得继续跟踪。市场调整后，优先聚焦优质客户订单持续增长、业绩趋势向上的一线龙头。\n\n\n\n#高端CCL的供给约束正在强化产品溢价。松下此前上调部分基板材料价格，11月4日台湾湖口厂发生火灾，进一步引发市场对低损耗CCL交期的关注。事故造成的实际供给缺口仍取决于复产、跨厂调配及客户认证进度，但也凸显高端板材难以快速寻找替代供应商。上游涨价仍在延续：据卓创资讯11月报价，7628厚布、2116薄布分别较前期上涨1.5元/米、2.5元/米；铜箔端，今年电",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064876",
     "title": "【HYDZ HL】尊重产业基本面，持续推荐主设备与关键零部件",
     "body": "时间：2026-11-09 11:03\n个股：未识别\n\n目前基于产业调研及上市公司口径，目前大陆扩产链景气度非常旺盛，鉴于行业公司的董秘/IR老师都保持非常稳健的交流风格，以及比较专业的卖方研究支撑，这一年来，扩产链对明年整体订单目标都是一路上修具体订单金额【边走边看边验证边上修】，没有出现用力过猛的现象，因此大家无需担忧基本面出现向下拐点的情况\n\n\n=== 完整正文 ===\n考虑到国内大量的存储及逻辑芯片缺口，大陆对原厂的投资叠加商业行为+国家意志的双重属性，以及本身芯片自身代际提升带来的Capex的提升，Capex投资的景气度和持续性相对更有保证\n\n\n\n从过去一周各科技板块的盘面，大家也能看出来gjd都在买什么，我觉得对未来不确定情况下， 跟着gjd买大概率不会错\n\n\n\n最后从推荐角度，设备又其优秀的订单水平以及27E/28E已经相对历史极度便宜的估值，非常适合做一定的防守配置，大部分公司估值28E＜25.0 PE且还可以看到28E订单的增长潜力，建议关注【飞测/华海，华创/中微/拓荆】；而零部件，尤其是已经在订单端出现显著拐点的公司，26是零部件企业的订单转折之年，27E是利润释",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064877",
     "title": "计算机，保持逆向，适度乐观！",
     "body": "时间：2026-11-09 11:04\n个股：未识别\n\n#业绩真空期可适度逆向乐观。1102周观点建议逆向加仓计算机，上周板块上涨6.85%，金股中科曙光上涨8.57%，均跑出显著超额。当前，处于难得的超跌之后的业绩真空期，建议持续逆向加仓高增长有持续性且估值有吸引力的国产算力龙头及AI前沿方向。\n\n\n=== 完整正文 ===\n#精选国产算力龙头去伪存真。近期，包括中期选举及黄仁勋事件持续对算力板块带来扰动，但对国产算力影响中性。国内AI基建需求及执行力强，替代潜力大，核心龙头增长具有持续性，风险因素已在前期调整中price in，建议以时间换空间，布局核心龙头。\n\n\n\n#继续重视物理AI及AI4S产业。A厂IPO冲刺，吹风model 4；O厂新一轮融资（估值1.25亿美金）临近收官，吹风GPT?6.2 Astra。上述模型，分别在RSI/AI4S、物理AI/具身大脑有望进一步提振市场信心。除此外，关注底部的应用细分赛道：FDE、AI营销等。\n\n\n\n#重点推荐：中科曙光、海光信息、中控技术、浪潮信息、紫光股份、金山办公、达梦数据、深信服、汉得信息",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064878",
     "title": "【申万交运&海外制造】松发股份（恒力重工）强call",
     "body": "时间：2026-11-09 11:06\n个股：未识别\n\n为什么当前时点推荐造船？\n\n\n\n#产业趋势向上确定性强，企业营收、利润率持续抬升可见性强。新船价格上行通道确立，企业营收及利润率均持续成长，当前为长周期上行中段位置，船价上行趋势未见拐点\n\n\n=== 完整正文 ===\n#估值安全边际充足～市场定价从未给予估值溢价～也并未发生估值扩张～市值成长全部以EPS增长为前提。造船产业链市场一致预期一直都按照周期股定价，如按照周期高点估值折现等，并不像其他类型表征的产业一样会给予高估值溢价，估值泡沫从未出现。\n\n\n\n#下游航运虽为周期性行业，但轮流贡献景气度，保障周期长度\n\n\n\n#造船景气度指标船价及新签订单量关系-缩量上涨：船价的成交型决定机制可类比股价及成交量，当前时点船价持续上行（股价上涨），但船厂产能已打满，新签订单只是在远期排队，故新签订单量会出现下滑（类比成交量下行），产业趋势角度，当前处于缩量上涨阶段\n\n\n\n为什么当前强call松发？\n\n\n\n#行业供给刚性下产能扩张～贡献稀缺的成长性～且成长性并未充分计价。造船行业供给刚性，扩产难度大，恒力22年进入造船市场，已接近完成三期扩产，",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064879",
     "title": "新增重点推荐航天电器：绝对底部的军贸最受益标的",
     "body": "时间：2026-11-09 11:07\n个股：未识别\n\n1、本轮军贸最主要爆发方向是防空武器，#航天科工集团26年军贸订单有望超1500亿，同比增长600%，#成为本轮最大赢家！\n\n\n=== 完整正文 ===\n2、军贸订单要求集团内配套，其中连接器价值量占比5%～7%，#航天电器作为科工集团唯一核心上市公司，有望独享连接器100亿大订单！\n\n\n\n3、27年看100亿收入，12亿利润，目前仅20倍估值，严重低估，坚定推荐，看翻倍空间！",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064880",
     "title": "算力策略｜城地香江（603887）：中国移动千亿算力投资开启，核心IDC供应商有望迎来价值重估！",
     "body": "时间：2026-11-09 11:08\n个股：未识别\n\n核心观点：中国移动2027年算力投资规划超1000亿元，未来两年计算能力计划连续翻番，吉瓦级数据中心加速落地。重点看好城地香江，凭借运营商核心订单、液冷机电交付及全国多区域布局，有望成为本轮算力基建扩张的重要受益标的！\n\n\n=== 完整正文 ===\n11月6日，中国移动释放重磅信号：2027年总采购规模预计超过5000亿元，算力投资超过1000亿元！今年开工3个吉瓦级计算园区，明年再建2个，总数达到7个。\n\n\n\n这意味着中国算力基础设施建设，正在进入新一轮规模化投资周期！\n\n\n\n#重点关注城地香江、市场可能低估了公司与中国移动的合作深度。\n\n\n\n旗下香江系统深度参与中国移动宁夏中卫、内蒙古呼和浩特、浙江嘉善、江苏扬州等核心数据中心项目。2026年多个项目合同及中标金额合计达数十亿元，具备从机电EPC、供配电、液冷系统到长期运维的综合交付能力。\n\n\n\n最值得重视的是，未来AI算力竞争正在从GPU采购延伸至电力、液冷、机房及全国算网协同！\n\n\n\n随着中国移动吉瓦级园区扩张，具备历史履约记录和跨区域交付能力的供应商，有望持续争取新增项目",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064881",
     "title": "【华创机械】机器人：苹果HALO验证Sim2Real，仿真训练迈向真机部署",
     "body": "时间：2026-11-09 11:09\n个股：未识别\n\n事件：苹果研究团队发布论文披露HALO机器人系统，利用1,000个程序生成的仿真家庭场景训练模型，并部署至宇树G1，在6个陌生真实房间中执行任务，360次单项技能测试平均成功率达91%。\n\n\n=== 完整正文 ===\n如何理解HALO系统？\n\n一句话，#让机器人先在仿真环境学习，#再到真实世界执行。HALO#打通“仿真生成数据-模型训练-真机执行”链路，通过场景随机化、碰撞检测和视觉渲染生成训练数据，再#采用分层控制系统完成任务理解与动作执行，最终在宇树G1上实现真是场景落地。\n\n\n\n产业意义是什么？\n\n1、验证Sim2Real，仿真数据有望便宜、量大、可落地\n\n相较Ego、UMI、动捕等数据，仿真数据可依托算力和场景生成持续扩充，#具备低成本、#规模化潜力，但存在Sim2Real的问题。HALO利用约296小时仿真数据、250张H100运行约48小时，实现真机基础技能零样本迁移，#有望解决Sim2Real问题。\n\n\n\n2、真机是仿真落地的基础\n\n仿真环境需要#还原真实机器人的关节构型、动力学、执行器及传感器参数，才能保证训练结果",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064882",
     "title": "本周策略观点",
     "body": "时间：2026-11-09 11:09\n个股：未识别\n\n1、周末消息偏中性，上周五海外也在逐步消化美国中选蓝潮交易，对于民主党横扫最大的预期差还是红洲翻蓝，加剧了AI叙事逆风恐慌。对于民主党横扫的后续影响，理性分析下对于今年引起情绪大幅波动的宏观事件会有收敛效果，但约束需要时间，而对AI产业政策态度的变化，也不是绝对的。\n\n\n=== 完整正文 ===\n只不过短中期难以证伪的叙事，会成为极致交易的抓手，再反向纠偏，放大了AI上游基建端的叙事逆风，属于加速杠杆踩踏，而非方向性影响，美股也会触发高波暴跌后短期可买的区间。另外，美国10月非农超预期，12月加息概率小幅上证，周五科技交易有所修复。\n\n\n\n2、国内方面，国常会点名股市，提出完善资本市场稳定机制，增强股市内在稳定性，多家券商公布开展SFISF交易，完成了首批股票买入操作。美国中选落地，上周连续四天稳市场力量大发力，买出了底部，指数走出来阻断式反弹，沪指和创业板指都出现多级别底部格局，前期低点3574点在反复低开试探中都没有击穿，哪怕周五输入性风险下也足见韧性。目前市场运行环境有点类似2022年4-5月，A股提前美股调整，港股又提前于",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064883",
     "title": "【浙商专精特新｜智算潮起·周思考1108】地面算力资源趋紧，太空算力打开新空间",
     "body": "时间：2026-11-09 11:11\n个股：未识别\n\n全球AIDC建设约束加剧，太空算力成为新方向。 泰国暂缓166个数据中心项目，印尼640MW大型园区停工，马来西亚柔佛州数据中心用电已占全州约24%。#电力、水资源及审批约束正从美国蔓延至东南亚，已获批、已通电AIDC资源稀缺性凸显。与此同时，SpaceX推进太空数据中心布局，Starship Flight 15拟于11月13日尝试助推器与飞船双回收，完全复用若取得突破，有望推动发射成本下降。#短期看地面有效产能重估，长期看太空算力打开增量建设空间。\n\n\n=== 完整正文 ===\n海外算租财报持续验证需求，融资模式创新支撑扩张。 Core Scientific 26Q3已计费容量达485MW，托管收入2.15亿美元、环比增长58%；IREN AI云季度收入2亿美元、环比增长182%，在手合同203亿美元，新签五年长约由客户预付90%的GPU资本开支。#海外算力需求持续兑现，行业从资本开支驱动转向订单交付、有效MW与现金流验证，具备电力资源、快速交付及低成本融资能力的企业优势进一步扩大。\n\n\n\n国内算力进入规模化投资与商业变现双重兑",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064884",
     "title": "锂电反弹的选股思路：竞争力+格局好的电池、供需好的铜箔/隔膜/铝箔、细分领域弹性标的#中信建投电新",
     "body": "时间：2026-11-09 11:12\n个股：未识别\n\n#1、竞争力+格局层面：电池环节\n\n消费税、出口退税、中欧摩擦等政策扰动已在Q3落地，市场情绪已进入最悲观阶段，估值下杀到10x区间，以宁德为例Q3超额计提税金+偶发性结构变化导致的单位盈利压力，后续将逐步缓解，估值修复是确定性事件。\n\n\n=== 完整正文 ===\n#标的：宁德时代（27年PE，下同，11x）、亿纬锂能（27年10x）\n\n\n\n#2、供需层面：铜箔/隔膜/铝箔环节\n\n27年铜箔、隔膜、铝箔的有效产能增速分别15%/23%/25%，相对克制，我们预计27年锂电需求增速21％-29%，因此铜箔供需同比将更加紧张，具备继续涨价的基础，隔膜/铝箔供需和今年基本持平，预计价格至少能够维持。\n\n#标的：恩捷股份（11x）、鼎胜新材（10x）、海亮股份（10x）、德福科技（22x）、嘉元科技（11x）、星源材质（13x）\n\n\n\n#3、细分领域弹性标的\n\n#标的：海伦哲（10x，海外储能作为当前需求确定性最强的板块，公司是海外储能弹性最大标的）",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064885",
     "title": "国泰海通医药｜最新周观点",
     "body": "时间：2026-11-09 11:13\n个股：未识别\n\n创新药：拥抱出海确定性，内需三季报业绩稳健\n\n外需：ESMO多项中国研究，包括SKB264、赛沃替尼等，验证中外数据一致性，国产创新药全球竞争力进一步夯实。2027年出海资产3期持续加速，~8款核心管线，包括SKB264即将进入美国商业化兑现期。\n\n\n=== 完整正文 ===\n内需：pharma和biopharma三季度商业化整体稳健，多家公司包括恒瑞、荣昌、百利等公司业绩超预期。\n\n\n\nCXO：外需关注确定性，内需关注景气度变化\n\n外需CXO：新分子逐渐进入商业化阶段，看好中国公司凭借全球竞争优势快速提升渗透率。多肽/小分子GLP-1产业链带来结构性增量。同时，随着多肽拓展到更多适应症，ADC、小核酸等新模态药物逐步进入商业化，临床阶段项目陆续转为商业化项目，看好外需CDMO业绩持续兑现。\n\n内需CXO：订单端先于收入端修复，看好国内CRO产业链景气度复苏。国内投融资逐渐修复，带动biotech研发需求回升。内需CXO订单同比回升，后续将随订单兑现周期逐步体现在业绩上。\n\n\n\n医疗器械：估值低+仓位低+业绩改善，继续推荐国产龙头",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064886",
     "title": "外需压力渐起，消费的四条新增长曲线【东财论消费·周观点｜#从无基之弹到有基反转】",
     "body": "时间：2026-11-09 11:14\n个股：未识别\n\n#外需不确定性持续抬升、消费需承担更多稳增长任务、结构性机会或比总量复苏更值得期待。2026年前三季度我国GDP同比增长4.6%，全年市场普遍预测增速约4.5%-4.6%，处于官方4.5%-5.0%目标区间的下沿。按照2035年远景目标倒算，2026-2035年GDP年均需要增长约4.17%，虽然今年增速仍高于这一要求，但考虑到“十五五”前期更高的增长诉求，后续稳增长仍需要持续发力。\n\n\n=== 完整正文 ===\n过去几年出口为国内经济提供了重要支撑，2025年净出口贡献约1.1pct的GDP增速，但未来外部环境的挑战正在增加：一方面，新兴市场潜在金融风险、欧洲及其他经济体强化本土制造，都可能扰动我国外需；另一方面，美国中期选举后AI监管不确定性增加，例如近期美国多地出现针对数据中心建设的限制，未来科技产业链需求仍存在扰动风险。根据我们之前反复提及的“出口与内需的跷跷板效应”，外需支撑若边际减弱，内需尤其是消费的重要性自然上升。#短期消费仍处于“无基之弹”阶段、但从中长期来看、更值得关注的是哪些产业能够成为内需增长的新支点。我们重",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064887",
     "title": "【华泰汽车】汽车37周观点：11月推荐龙头潍坊AIDC龙头、中国重汽H，关注比亚迪、吉利、奇瑞",
     "body": "时间：2026-11-09 11:16\n个股：未识别\n\n#AIDC缺电：北美11~12月出货气发，推荐潍坊AIDC龙头，展望27年不到10x PE\n\n1、潍坊AIDC龙头：展望11~12月，公司即将出货燃气发电机（主电），展望27年200亿利润，当前估值8x PE，股息率4.5%，兼具分红和成长！\n\n\n=== 完整正文 ===\n2、本周股东会交流的结论如下：\n\n（1）#高股息提供安全垫（#股息率4.5%）\n\n（2）气发放量节奏不变（今年200台，27年预计2000台），且公司预测：气发有望和燃气轮机在使用成本平价，非常乐观看待长期需求。\n\n（3）基础业务方面，出口创造增量、非道路工程机械配套率提升（当前仅20%），零部件业务也会带来增量利润，以上可维持基础业务利润稳健。\n\n\n\n#商用车：股息率6%+的分红标的中国重汽H，出口27年增速预测10%~20%\n\n1、低估值：中国重汽H 26年分红49亿元，对应当前市值828亿人民币，股息率6%，对应今年PE 9倍。（MAN减持为压制因素，但当前估值已接近历史低位）\n\n2、出口持续增长：27年预计增速10~20%，#看好新兴市场（非洲、东南亚等",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064888",
     "title": "保险周周谈第42辑：看好人保H与财险的股息回报和盈利弹性",
     "body": "时间：2026-11-09 11:17\n个股：未识别\n\n#财险：前三季度车险综合成本率降至94.3%，带动整体承保利润同比+11.3%。个人非车险保费达503亿元，同比+16.3%，前三季度增量已与去年全年持平。公司以“车＋人＋家”拓展医疗险和家财险，科技险已实现承保盈利。2027年，公司力争个人非车险保费增长15%，法人业务增速与GDP增速相当，政府业务保持市场份额稳定，车险增速与市场同步。后续关注非车险放量能否持续增厚承保利润。\n\n\n=== 完整正文 ===\n#人保H：集团前三季度健康险保费同比+7%至1,532亿元，贡献集团保费增量的57.1%。早筛、创新药直付等服务有望通过产寿险协同改善赔付和续保表现。10月以来集团加大权益配置，若市场回暖，投资端有望带动利润修复。\n\n\n\n#股东回报：集团重申DPS长期稳定增长目标。若两家2026年全年DPS维持上年水平，按11月6日收盘价及汇率测算，人保H和中国财险税前股息率分别为4.78%和4.60%，高股息优势突出，重点推荐！",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064889",
     "title": "有色周观点",
     "body": "时间：2026-11-09 11:18\n个股：未识别\n\n金：周内金价波动较大，上半周跌穿3900美金且跌破6月低点后市场一度讨论4000美金会否成为反弹阻力，信心阶段性崩塌导致股票大跌。后半周美国中选民主党横扫两院后，金价迅速反弹，一度超过4100美金，后金价因周五晚公布的超预期的非农数据而小幅回落。\n\n\n=== 完整正文 ===\n市场在交易民主党的政策预期（战争预期缓和、AI投资或放缓，带来通胀预期下降）有望缓解前期压制金价的三个利空因素：流动性压力+加息预期+AI拉动美经济及通胀数据，从而利好金价。除此之外我们认为金价的大幅反弹更多是前期调整充分+不确定性事件落地，此外金价本身也处在关键点位，重新回到4000以上对4000作为价格底的信号意义较强。另外本周公布的央行数据限制10月中国央行环比增加83万盎司，连续24个月增持黄金，且随着价格的回调增持的幅度进一步增大。价格的中期托底逻辑没有变化。\n\n\n\n股票维度，本轮随着金价前期的回调以及市场整体情绪较差，主流标的经历过前期的下跌后，当前位置又开始具有性价比，且在有色板块内部，部分品种的价格与AI的趋势正相关，而黄金是唯一一个略偏负相",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064890",
     "title": "【白酒跟踪106】板块弱企稳，个股强分化，重视白马标的绝对收益价值",
     "body": "时间：2026-11-09 11:19\n个股：未识别\n\n26年动销探底、去库加速，龙头酒企报表减负纾压\n\n\n\n26年白酒行业处于需求缓中趋稳、渠道加速去库和报表集中出清的调整阶段。#从去库变化看，26年多数酒企C端开瓶增速>渠道动销增速;收入增速，我们统计白马酒企26年报表收入降幅较其实际动销降幅普遍多出5~10ppt，渠道库存基本调整至可控水平（茅五汾古均有明显去库）。考虑27年去库力度边际减缓，且实际动销趋于企稳，龙头酒企报表具备温和增长支撑。\n\n\n=== 完整正文 ===\n27年报表企稳修复基调下，精选具备增长可持续性的优质个股\n\n\n\n基于去库反转，预计上市酒企27年收入有望恢复低单或中单增速，近期板块股价普涨，对此已有一定反映。推荐后续基于业绩增长可持续性，精选更具基本面支撑的优质个股。#从动销份额扩张潜力看，1、价格带两头超高端、中高端动销相对稳健，对应茅台具备稳定的渠道利润蓄水池保护，今世缘-淡雅、迎驾-洞6/9、古井-古8/16等具备大单品扩张空间。2、次高端整体承压、分化加剧，多数产品囿于价盘/渠道管控不成熟、市场培育不持续、经营治理不稳定等因素，份额显著萎缩，渠道资源",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064891",
     "title": "【华福有色】民主党获得两院控制权致黄金板块大涨",
     "body": "时间：2026-11-09 11:21\n个股：未识别\n\n1、金：本周三特朗普承认中期选举失利叠加本周布伦特原油暴跌13.61%，伦金最高涨至4,146美元/盎司，周五美非农大超预期致金价回落，伦金周大涨5.05%至4,070美元/盎司。我们认为，今年2月美伊冲突以来，不断创新高的油价不断推升高通胀，美联储加息预期持续走高。同时叠加近期美股持续下跌引发流动性担忧是金价下跌的主因。\n\n\n=== 完整正文 ===\n若美伊冲突再次升级则金价存二次探底可能；若冲突彻底结束，金价拐点将至。中长期全球流动性宽松叠加去美元，金价上涨趋势不变。个股：推荐赤峰招金万国灵宝，其他推荐中金、山金国际、紫金国际及潼关等。\n\n\n\n2、铜铝：1）铜：本周国内电缆等开工率下行需求疲弱，但国内持续去库致现货高升水。本周lme及comex累库带动全球累库。民主党控制两院或致铜关税落空及美国算力投资放缓致沪铜下跌3.51%。我们认为，基本面对铜价有支撑，但宏观致铜价上涨动力不足。个股：宏观压制致股票，关注高争、洛钼、紫金、江铜、西矿、金诚信、五矿、中金国际、金浔、盛屯及云铜等。2）铝：铝继续稳步去库，铝价微涨。我们认为，明",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064892",
     "title": "【长城证券-能源开采】继续call煤炭再上车机会，煤价再度反弹且开工率再降",
     "body": "时间：2026-11-09 11:22\n个股：未识别\n\n供给端又开始下降。10月以来市场一直有政策保供和核增的消息，但整个10月的开工率已经验证，仍旧很低，最近一周山西开工率又明显下降，陕蒙近两周都是下降；核增方面，三季报跟多家公司交流，部分企业虽上报了核增，但审批流程很长，且不会立刻释放产量，而且核增是否是长效产能也不是完全统一说法。\n\n\n=== 完整正文 ===\n对于供给端，我们仍旧维持之前的判断逻辑，现在到2028年初，是选举换届年，按惯例，安全是重中之重。\n\n\n\n需求端重回电厂高日耗。北方已经入冬，北京已经在11月6日供暖且温度0度以下，高日耗有望重新接力需求端利多。反映在秦港报价，从近期调整后的1006元反弹至1016元，煤价仍在千元以上。从港口煤价对比，前三季度均价同比去年上涨约132元（从674到806元），涨幅20%；三季度环比二季度上涨约60元（从818元到878元），涨幅7.3%。展望四季度均价有望在千元水平。\n\n\n\n煤炭长协基准有望提升。一年一度的煤炭交易大会即将召来，重新谈长协定价体系和明年长协量，在当前供给紧张背景下，煤炭一方占据主动权，长协基准价有望提升。且",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064893",
     "title": "【华源农业】周度数据更新",
     "body": "时间：2026-11-09 11:23\n个股：未识别\n\n1、#养殖板块：#本周全国猪价8.6元/kg，环比-0.5元/kg；部分省份猪价跌至7+元/kg；仔猪价格86元/头、有价无市，产业资金压力持续累积。据涌益样本，11月5日，日均屠宰量15.6万头，周环比微降、同比-2%；体重130.2kg，周环比+0.3kg，同比+1.7kg。短期看，养殖端积极出栏但屠宰减量、体重增加，库存后移，预计短期猪价难反弹；中期看，根据饲料数据，亏损至少持续至27Q1，现金流失血、产能去化仍是主基调，据钢联和涌益，10月母猪去化约-1.6%、-0.6%。\n\n\n=== 完整正文 ===\n#目前产业绝望时刻、现金流失血已有1年以上；处于周期底部、估值低位；是优质个股极佳的配置时点。产能仍在去化，明年景气趋势确定、高度有可能上修，重点推荐德康、牧原、温氏、神农、立华等。\n\n\n\n2、#饲料板块：#本周普水价格跌、特水价格普涨；水产品库存不高。①特水：生鱼/加州/黄颡/叉尾-4%/+2%/+3%/+4%；②普水：草鱼/鲫鱼/鲤鱼/罗非0%/-3%/-0.5%/-2%；③虾蟹：白对虾0%。#推荐【海大集团】，27年",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064894",
     "title": "【华福姚婧团队】AI漫剧系列研究",
     "body": "时间：2026-11-09 11:24\n个股：未识别\n\n1、广电继6月后新一轮整治至12月底，针对AI短剧1）内容创作，整治不良内容、侵权；2）传播推广，片名素材低俗、推荐同质化；2、海外AI应用头部公司Applovin增速高于预期；3、Open AI即将更新大模型；\n\n\n=== 完整正文 ===\n短剧精品化趋势确认，不影响行业发展，推动高质量供给，利好IP公司、影视、游戏方向\n\n\n\n近期新增：\n\n①《后西游记》AI长剧专家②短剧出海头部专家；\n\n聊AI动画长剧的单集成本与制作流程、CP产能和出海安排；\n\nJC股份、HZ数媒、HS科技、东方CL交流；覆盖AI电影审批绿色通道、互动影游、自研大模型和IP壁垒",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064895",
     "title": "【申万宏源通信】北美AIDC建设受限，东南亚、国内Token出海等算力需求有望拓宽，持续推荐润泽科技",
     "body": "时间：2026-11-09 11:25\n个股：未识别\n\n#海外供给受约束、可交付算力价值凸显。\n\n民主党上台后，电力审批与社区协调对北美数据中心扩张的约束预计显著加强。大厂或推进全球范围内的算力需求迁移。\n\n\n=== 完整正文 ===\n两个值得关注的区位：东南亚、国内token出海\n\n1）东南亚：区位、电价、建设约束等综合条件相对较优。马来西亚柔佛快速建设交付，需求有望外溢至泰国、印尼等。\n\n2）国内token出海：国内算力价格与扩容潜力具备绝对优势，当前已出现境内算力服务境外客户的Token合同，规模化加速。\n\n\n\n重点推荐#润泽科技：国内算力与海外机柜共同驱动成长（11月金股）。\n\n\n\n1）境内强化AIDC服务：截至Q3公司总计投入约180亿算力设备；预计26Q4+27Q1 500亿银行授信进一步投入，27年新增需求推动下有望爆发式增长。\n\n2）IDC布局东南亚印尼巴淡岛，市场稀缺。巴淡岛项目年底前有望交付60MW，未来年化百MW规模交付。\n\n\n\n#行业层面，看好11-12月AIDC/算租迎来显著估值修复。板块Q3+10月的回撤与产业订单推进、算力供不应求趋势形成显著背离，配置性价",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064896",
     "title": "【东吴电子陈海进】AI产业长期趋势仍具支撑，看好硬件板块修复机会",
     "body": "时间：2026-11-09 11:30\n个股：未识别\n\n近期海外AI硬件板块的调整，核心矛盾在于供给侧数据中心建设节奏的扰动，市场主要担忧美国中期选举后数据中心建设面临更严格的能源成本、用水及环保约束，项目审批与建设周期存在延迟风险。这一约束影响的是算力基础设施的投放节奏，不宜线性外推为需求总量下修。\n\n\n=== 完整正文 ===\n需求侧多项指标仍在验证高景气：亚马逊在26Q3业绩会上预计AWS 2027、2028年收入增速均有望超过40%，谷歌26Q3自由现金流转负91亿美元，但全年资本开支指引维持1950亿至2050亿美元，并预计2027年资本开支将显著增长，Anthropic 10月底ARR据第三方估算已达约800亿美元，云厂商收入指引、资本开支投入与AI应用商业化进展均未出现走弱迹象。\n\n\n\n放眼A股，近期PCB、上游元器件以及光通信标的的调整亦属于市场交易与预期层面，悲观预期已有较充分反映，不应纳入产业供给端叙事。我们观察到积极信号在于，26Q4 PCB板块受益于新平台批量交付、环比业绩有望持续改善，光通信上游无源器件拉货仍然紧张，光模块厂商亦有望延续较好业绩表现，产业端边际",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064897",
     "title": "【东北计算机】催化渐近，三重逻辑建议关注端侧AI——出货放量、算力通胀、成本压力缓和",
     "body": "时间：2026-11-09 11:34\n个股：未识别\n\n#近期催化：字节、OpenAI加码AI硬件，国内外新品预期共振。 字节PICO Space Pro及世界模型有望在“双十二”亮相，关注实时交互世界模型能否同步发布、带来新的沉浸式体验。海外OpenAI已完成io团队整合，公司高管年初曾提及首款设备有望于下半年亮相，具体发布时间仍待官宣。头部模型厂商向硬件延伸，有望带动市场对新品形态及供应链增量的关注。\n\n\n=== 完整正文 ===\n#量增：眼镜率先放量、桌面机器人&摆件和玩偶拓宽需求 Counterpoint数据显示，2026年上半年全球AI眼镜出货同比增长263%；京东2026年618期间AI玩具销量同比增长283%。陪伴类产品也已出现跑量单品，据企业向《中国新闻周刊》披露，桌面AI宠物Ropet累计销量接近4万台，可移动机器宠物Loona超过10万台，毛绒AI陪伴挂件芙崽超过30万台。我们认为，多品类共同拓展有望增加芯片和模组需求，后续看终端留存、动销和补单能否持续。 \n\n\n\n#算力通胀：更多推理往本地下沉、带动单机芯片价值量提升\n\n小模型轻量化叠加低延迟、弱网可用和隐私需求，",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064898",
     "title": "【广发军工】太空算力催化升温，轻量化+散热高要求下#3D打印 获新机遇",
     "body": "时间：2026-11-09 11:46\n个股：未识别\n\n#马斯克明确太空算力建设规划。近期，马斯克表示地面数据中心面临多重审批约束，因此推动太空算力产业建设加速——首批 StarMind计算机或于2027Q3发射，2028年扩大部署（新增部署量或超过地面），2029年进一步放量。\n\n\n=== 完整正文 ===\n#轻量化是航天产业基本要求+散热是高功率算力在轨运行额外要求。 火箭运力有限，星体结构越轻，留给芯片和供电系统的重量余量越大。地面机房可借助空气或冷却水排热，太空真空中则要把芯片热量导到辐射板，再向外辐射。单星功率越高，越需要在有限重量内排出更多热量。\n\n\n\n#3D打印兼顾散热和减重已明确进入算力卫星应用。\n\n#明确优势： 金属3D打印可将薄壁承力结构一体成型，也能在热管内直接成形多孔芯吸层，帮助冷却工质回流。\n\n#现有应用： NASA资助项目的钛水热管散热器原型在地面热真空试验中于230°C运行，单位面积重量约减半。国内“梁溪星座”招标要求12颗智算卫星均采用增材制造，“星算”02组的“铂力特”号主体结构已用公司设备打印。\n\n\n\n考虑太空算力对散热和减重需求，和地面数据中心相比",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064899",
     "title": "PPI再度刷新前高",
     "body": "时间：2026-11-09 11:47\n个股：未识别\n\n10月PPI同比升至+5.7%，CPI和核心CPI分别为+0.7%、+0.8%，对应GDP平减指数冲高至2.4%。工业品价格仍由AI、能化等结构性行业支撑，但其他行业也开始跟随涨价，关注后续涨价扩散情况。\n\n\n=== 完整正文 ===\n10月AI、能化、非AI非能化行业同比分别为9.2%、19.1%，0.7%；前值为9.9%、13.9%、0.4%。一来随着基数走高，AI行业涨价幅度已经开始趋缓，预计后续AI行业对PPI的支撑或进一步放缓，按照PPI领先于出口价格指数的经验，关注后续出口的价格弹性变化以及对出口增速的影响。\n\n\n\n二来其他行业价格同比上行至0.7%，连续两个月转正。按照二级细分行业看，9月在约220个PPI二级子行业中，已经有92个二级子行业同比转正，关注后续PPI同比增速的扩散进度。\n\n\n\n核心CPI同比仅+0.8%，其中服务价格同比小幅回落至0.7%，对应十一消费以价换量的特征，也表明终端需求与内生涨价动力仍偏弱。",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064900",
     "title": "【银河电新】美国延长光伏设备关税豁免，利好国内设备厂商",
     "body": "时间：2026-11-09 11:48\n个股：未识别\n\n#事件：美国延长178项中国产品关税豁免、覆盖硅片、电池片制造设备。2026年11月6日，USTR公布延期文件，将现有178项中国产品的301关税豁免延长2个月至2027年1月9日（原到期日为11月9日），其中包含14项光伏制造设备豁免，延续原有产品范围。\n\n\n=== 完整正文 ===\n具体覆盖三类环节：1）硅片制造，包括单晶生长炉、开方带锯、粘棒设备、金刚线切片机及配套导轮、冷却液回收和脱胶设备；2）电池片制造，包括制绒、刻蚀、抛光、清洗、扩散炉、PECVD/LPCVD、PVD及丝网印刷和烧结设备；3）相关物料搬运、硅片装卸设备。\n\n\n\n#影响：原301关税为25%、豁免期延长反应美国对国内设备依赖度较高。我们认为美国本土硅片、电池片产能明显不足，此次关税豁免或将反应美国加快本土光伏产能建设，对国内光伏设备需求较强。民主党中期选举获胜有望改善美国新能源政策预期，叠加此次关税豁免延期，国内光伏设备在美竞争优势增强。此外，今年10月16日国内光伏设备出口拟禁止、管控范围与美国关税豁免项目存在交集，后续仍需关注具体出口技术指标。\n\n\n",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064901",
     "title": "【AI数据中心】目光投向非洲！",
     "body": "时间：2026-11-09 11:49\n个股：未识别\n\n非洲部分国家拥有便宜且稳定的巨量水电，海底光缆直通欧洲、北美、中东，网络时延100毫秒左右。\n\n\n\n部分在非洲拥有大量电力的公司，具备转型【AI数据中心】建设的潜力。\n\n\n=== 完整正文 ===\n【华通线缆】非洲电解铝龙头，低估值标的，2026-2028年PE估值为15、6、4倍。未来如果电解铝三期项目及新兴业务落地，业绩有望大幅超预期！",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064902",
     "title": "【中信新材料/制造】注重钛材在天空算力新增量",
     "body": "时间：2026-11-09 11:50\n个股：未识别\n\n钛材在太空算力机柜的承力底板、局部防护罩等部件具备潜在应用空间。\n\n\n\n保守测算：参考GB200机柜体积，假设太空机柜单位钛板使用面积6平米，厚度1mm、薄板单价40万元/吨，对应单柜价值量1万元左右。按SpaceX公布的平均计算载荷功率175kW/套，每新增1GW带动钛板价值量约0.6亿元，远期100GW带动60亿元市场空间。\n\n\n=== 完整正文 ===\n太空算力钛材：【西部材料】、【西部超导】、【宝钛股份】、【金天钛业】、【金钛股份】。\n\n此外太空算力推荐：【佳都科技】、】【顺灏股份】，【宇晶股份】。",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064903",
     "title": "太空算力+商业航天：射频产业链迎来新增长空间",
     "body": "时间：2026-11-09 11:53\n个股：未识别\n\nAI算力正在从地面向太空延伸。随着低轨卫星互联网、太空算力星座加速建设，卫星将从传统通信平台升级为集计算、存储、通信于一体的智能化平台。\n\n\n\n核心产业逻辑：\n\n\n=== 完整正文 ===\n商业航天： 可重复使用火箭、卫星批量制造及低轨组网，将降低发射成本，推动卫星数量持续增长。\n\n\n\n太空算力： 卫星搭载计算芯片，实现遥感数据在轨处理、星间协同及天地一体化计算，对通信带宽和数据传输能力提出更高要求。\n\n\n\n射频增量： 卫星数量增长、相控阵天线普及及多波束通信，将带动T/R芯片、GaN/GaAs功率放大器、低噪声放大器、射频收发芯片等需求提升。尤其是高集成度相控阵系统，单星射频价值量有望增加。\n\n\n\n重点关注A股：\n\n\n\n铖昌科技： GaN/GaAs相控阵T/R芯片。\n\n\n\n卓胜微： 射频前端、RF-SOI及特色工艺平台，关注卫星通信终端及未来高频射频器件的增量机会。\n\n\n\n臻镭科技： 射频收发芯片、高速ADC/DAC及星载电源。\n\n\n\n国博电子： 高性能T/R组件、射频放大器。\n\n\n\n信维通信： 卫星天线、射频组件。\n\n\n\n航天",
-    "error": "Expecting value: line 1 column 1 (char 0)"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064904",
     "title": "【zx汽车】机器人板块观点更新20261108——机器人热度不减，苹果正式入局大脑！",
     "body": "时间：2026-11-09 11:56\n个股：未识别\n\n苹果披露机器人自主控制系统HALO、正式下场入局\n\n苹果研究团队在arXiv提交论文《Perceptive Humanoid Motion from Simulation》，披露了人形机器人自主控制系统HALO。HALO采用三层级架构协同控制，默认采用了Qwen作为VLM模型，利用宇树G1在6个未预先扫描或建图的真实环境中开展360次单项任务测试，平均成功率为91%。\n\n\n=== 完整正文 ===\nHALO使用250张英伟达H100 GPU，耗时约48小时合成主要训练数据。动作生成器通过学习训练，使用64张B200；动作跟踪器经强化学习、策略蒸馏等步骤训练，使用4张H100。北美科技巨头苹果正式入局全尺寸人形机器人。\n\n\n\n12月初特斯拉机器人V3有望正式亮相\n\n2026硅谷人形机器人峰会将在12月1日至2日在加州圣马特奥揭幕，特斯拉、Agility Robotics、Boston Dynamics等机器人巨头和明星初创企业悉数参会。机器人峰会官方账号官宣Optimus机器人将在会场展示，V3版本或将正式亮相！此外，12月3日特斯",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064905",
     "title": "【XN智能制造】再次推荐同星科技：无锡同为打造机器人结构+散热一体化，绑定智元生态打开成长空间",
     "body": "时间：2026-11-09 11:57\n个股：未识别\n\n精密结构件+散热模组双轮落地，深度对接智元具身产业链\n\n定位：#人形机器人关节/灵巧手精密结构件+一体化散热方案\n\n产线产能释放，生态协同持续推进，把握具身智能量产周期\n\n\n=== 完整正文 ===\n①主体：控股无锡同为，核心团队源自日本微研，加工精度可达1?2微米，主打机器人头部、胸腔、大关节、灵巧手精密结构件。\n\n②散热：依托同星换热技术，和同为形成协同，同步配套机器人散热模组，结构+散热一体化交付，区别于单一零部件厂商。\n\n③生态：参股境智具身、联动具身慧智，深度绑定智元生态；产品进入送样、定点、小批量落地阶段。\n\n④产能：8月新产线投产，月产值约1000万，当前产能饱和，后续按每年2?3倍节奏灵活扩产。",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064906",
     "title": "华是科技：独家toppick首推标的，内容创作领先者，珍惜每一次回调上车机会！",
     "body": "时间：2026-11-09 11:59\n个股：未识别\n\n短剧漫剧内卷当下，如何理解华是的核心竞争力？\n\n新实控人多年从业经验： 董事长郑总15年的互联网广告精准营销经验，在国内短剧尚未爆火情况下，在国内市场独占鳌头，国内外核心负责人累计投流超百亿\n\n\n=== 完整正文 ===\n自研agent打通全环节、更高的投流效率： 搭建AI短剧全流程业务链条，涵盖自研“无凡”agent、自制内容生产、发行分销等，实现更高的人效、更高的净利率。未来将从自用逐步商业化，已经与北斗伏羲大模型签约，逐步走向商业化\n\n\n\n当前还有什么预期差？\n\n国内卡位字节、腾讯生态： 国内市场普遍盈利能力偏低，依托AIGC工具实现“快速上线、快速迭代\"，1）字节：重新签约年框换去更好的返点政策；2）把握绿泡泡的流量红利期，人员和经验均可复用，日流水快速爬坡及净利率高\n\n海外自建平台，长期目标全球前三：公司9月在海外自建APP，布局170个国家，10月正式开始爬坡，周度数据环比高速增长，且净利率高，看好年底目标超额达成，长期目标通过自主+整合实现全球短剧前三#重视海外beta！重视三大平台的流量红利！重视目标超预期的可能性",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064907",
     "title": "【国金电新】奥来德：重视商业航天新标的，卡位太空钙钛矿高端蒸镀设备",
     "body": "时间：2026-11-09 12:02\n个股：未识别\n\n由于太空环境的特殊性，蒸镀是太空钙钛矿电池制备的最优工艺之一，干法成膜可以减少溶剂污染、实现原子级的均一性控制、缺陷密度低，且相对溶液法具备抗辐射（膜层致密）、耐温度循环（内应力低）、在轨寿命更长（满足太空材料放气标准）等优势。\n\n\n=== 完整正文 ===\n公司立足显示行业高质量蒸镀技术，以材料+设备协同推进优势，拓展钙钛矿光伏太空场景应用。\n\n\n\n#赛道： 太空钙钛矿电池蒸镀装备。\n\n\n\n#技术： 蒸镀膜厚均一性≤1.5%，位居行业前列。\n\n\n\n#产品： 650mm×450mm钙钛矿蒸镀机，满足钙钛矿电池中试线及小规模量产场景需求；1.2m×2.4m大尺寸钙钛矿蒸镀机，适配GW级规模化量产场景。\n\n\n\n#客户： 2026年2月，公司与上海港湾签署钙钛矿领域战略合作框架协议，双方合作聚焦材料与器件层面、工艺与设备层面，同时与行业其他头部公司也在密切对接。\n\n\n\n空间测算：太空光伏+主业合计先看300亿，现价139亿，当前空间巨大，重点推荐！\n\n——太空光伏：假设钙钛矿新增产能10GW/年，钙钛矿层、电子传输层及过渡界面均采用蒸镀",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064908",
     "title": "【金固股份】涨停点评：与头部机器人订单合作，阿凡达材料跨界应用【浙商化工&算力 杨占魁】",
     "body": "时间：2026-11-09 12:04\n个股：未识别\n\n公司阿凡达车轮已实现国内外头部主机厂批量供货，2026H1新增多家头部新能源车企多款定点，并成功斩获欧洲本土重卡OE及国内无人驾驶出租车项目定点。除车轮之外，公司积极探索阿凡达材料在具身智能、低空飞行器、两轮车等新兴领域的应用，#实现从传统汽车零部件制造商向新材料解决方案提供商的升级。\n\n\n=== 完整正文 ===\n#金固股份已经和国内头部的机器人厂家有订单合作，目前，#传动机构零部件和精密、应力集中的高强度零部件已经实现了量产。后续，公司将双足人形机器人与四足机器人统筹布局，一方面聚焦高轻量化、高强度特种材料方向，拓展新材料的应用边界；另一方面瞄准关节模组传动减速器、关节模组整体设计制造等核心零部件领域开展技术攻关。\n\n\n\n风险提示：原料价格波动；在研项目进度及下游应用不及预期等。",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   },
   {
     "rec_id": "1064910",
     "title": "【zx汽车】肇民科技：北美大客户新订单即将落地，机器人业务纯度快速提升",
     "body": "时间：2026-11-09 12:07\n个股：未识别\n\n#重大变化—北美大客户大额订单即将落地\n\n近期，北美大客户将来公司就电池产品洽谈大额订单（4680电池有望在车以外的机器人、商业航天领域全面铺开应用），该项目预计明年H1投产并逐年放量，根据客户指引测算，2027/28利润贡献分别为0.75/1.5亿元，空间可观。\n\n\n=== 完整正文 ===\n#新进对接OAI；机器人事业全面开拓\n\n公司新进对接Open AI，具身智能和IOT部门同时对接（直接对接Open AI合伙人，级别很高）。复盘过去10年，公司在挖掘和开拓新领域有非常优异的表现（20年开始布新能源，24年营收占比已经接近50%），随着目前北美大客户机器人业务的配套逐步趋于稳定，公司后续将有大量精力用于机器人新产品、新客户的开发，机器人业务有望进入爆发期。\n\n\n\n#机器人定子叠片稳定放量；卡位优势明显\n\n公司是日资技术起家的精密注塑小巨人，目前机器人量产产品主要是机器人电机中的定子叠片，手部和躯体电机均已批量生产，产品价值量高（4-5千元）、壁垒厚（产品体积小，精度要求高），目前公司单月供货150-200万片，全年营收预计约",
-    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026110"
+    "error": "HTTP 429: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026111"
   }
 ]
